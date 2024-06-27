@@ -348,9 +348,7 @@
             As the temporal distance increases, the F1 score decreases and 
             KL-divergence increases. This indicates that the agent's ability 
             to provide accurate predictions diminishes for events further 
-            in the future. To comprehensively benchmark the 
-            forecasting capabilities of LLM agents, we should focus on 
-            long-term predictions such as those spanning 30 or 90 days.  
+            in the future.   
           </p>
           <p>
             <b>Forecasting accuracy on different relation types.</b> 
@@ -384,14 +382,10 @@
         <div class="content has-text-justified">
           <p>
             <b>How tool-use ordering influences forecasting.</b> We further investigate the impact of action 
-            order on the GPT-4o agent in ``Single Function'' mode. We show the transition graph from the 
-            initial query to the correct final answer, with thicker edges indicating more frequent 
-            transitions. Typically, the agent begins with get_relation_distribution or get_event 
+            order on the GPT-4o agent in ``Single Function'' mode. Typically, the agent begins with get_relation_distribution or get_event 
             to gather an initial set of recent and frequent events for key information, and often concludes 
             with browse_news_article and get_news_articles, which retrieve news content to make accurate 
-            forecasts. We also subtract the frequency of incorrect predictions from those of correct 
-            predictions, where red edges represent sequences typically leading to accurate outcomes, 
-            and blue edges indicate error-prone path. 
+            forecasts.  
           </p>
       </div>
         <div id="results-carousel" class="carousel results-carousel">
@@ -473,6 +467,16 @@
   </div>
 </section>
 
+<section>
+  <div class="section" id="org-banners" style="display:flex">
+    <a href="https://www.ucla.edu/" target="_blank" rel="external">
+        <img class="center-block org-banner" src="static/logos/ucla.png">
+    </a>
+    <a href="https://www.berkeley.edu/" target="blank" class="ext-link">
+        <img class="center-block org-banner" src="static/logos/caltech.png">
+    </a>
+  </div>
+</section>
 
 <footer class="footer">
   <!-- <div class="container"> -->
