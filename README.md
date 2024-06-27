@@ -1,1 +1,1 @@
-# mirai-llm.github.io
+# mirai.github.io

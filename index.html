@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MIRAI: Evaluating LLM Agents for Event Forecasting">
+  <meta name="keywords" content="MIRAI, agent, event forecast">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> MIRAI: Evaluating LLM Agents for Event Forecasting </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <!-- <span class="mathvista" style="vertical-align: middle">MIRAI</span> -->
+            <span>MIRAI: Evaluating LLM Agents for Event Forecasting</span>
+          </h1>
+          <!-- <h2 class="subtitle is-3 publication-subtitle">
+            MIRAI: Evaluating LLM Agents for Event Forecasting
+          </h2> -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Anonymous Authors</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://anonymous.4open.science/r/ForecastAgent-3419/README.md"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1j6LqI8i5eRVemWsIJge8L4lGQyPiNiTs/view"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🤗</p>
+                  </span>
+                  <span>Data</span>
+                </a>
+              </span>
+              <!-- Demo Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1kKvYdAYv5hed-sbF_QE1moP-dQbfYoXI/view"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🤗</p>
+                  </span>
+                  <span>Demo</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="content has-text-centered">
+      <img src="figures/pie-chart.png" alt="geometric reasoning" width="80%"/>
+      <p> 
+        <b>MIRAI</b> comprehensively covers global event data. The circular chart shows the relation hierarchy and distribution in MIRAI. 
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Introduction -->
+<section class="section">
+  <div class="container" style="margin-bottom: 2vh;">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Introduction</h2>
+        <div class="content has-text-justified">
+          <p>
+            Accurate forecasting of international events is critical for stakeholders to make informed 
+            decisions and mitigate risks. Traditional methods in international relations rely on domain 
+            expertise and detailed analyses of factors such as alliances and historical rivalries. However, 
+            these methods often suffer from limitations such as incompleteness or bias in knowledge graphs 
+            and a lack of factual grounding in textual analyses. The rise of deep learning techniques offers 
+            an alternative through data-driven neural networks, but challenges in interpretability and 
+            validation remain. These limitations raise concerns about the reliability of AI forecasters, 
+            particularly in high-stakes scenarios.
+          </p>
+          <p>
+            Large Language Models (LLMs) present a promising path for overcoming these challenges due to 
+            their ability to process diverse sources of information and generate human-like reasoning. 
+            Despite their potential, there is a lack of standardized benchmarks to assess LLMs' forecasting 
+            abilities. To address this, we introduce <b>MIRAI</b> (<b>M</b>ulti-<b>I</b>nformation 
+            <b>F</b>o<b>R</b>ecasting <b>A</b>gent <b>I</b>nterface) provides <b>a rigorous benchmarking 
+            environment for LLMs in international event forecasting</b>. MIRAI leverages real-world data and 
+            adapts it to an event-forecasting task format, enabling LLMs to interact with both relational 
+            and textual databases. Evaluation of LLMs on MIRAI highlights challenges in temporal forecasting 
+            and the effectiveness of different tool usage strategies, with GPT-4o showing the highest 
+            performance. These findings underscore the need for ongoing research to enhance LLMs' 
+            capabilities, aiming for more precise and reliable models for political analysis.
+          </p>
+        </div>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="figures/intensity.png" alt="image name" width="90%"/>
+              <p>
+                The heatmap visualizes the intensity of these events globally, distinguishing between areas of conflict (red) and mediation (blue). 
+              </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="figures/frequency.png" alt="image name" width="75%"/>
+              <p> The heatmap illustrates the frequency of these events, highlighting regions with the most occurrences.  </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MIRAI -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">The MIRAI Benchmark</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our benchmark features an agentic environment with tools for accessing an extensive database of historical, structured events and textual news articles. We refine the <a href="https://www.gdeltproject.org/">GDELT</a> event database with careful cleaning and parsing to curate a series of relational prediction tasks with varying forecasting horizons, assessing LLM agents' abilities from short-term to long-term forecasting.
+          </p>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="figures/dataset.png" alt="geometric reasoning" width="100%"/>
+            <p> An example of forecasting the relations between Australia and China on Nov.18.2023. The database contains query-related historical relations and news articles, while the agent fails to predict the change of relation and makes a wrong forecast.</p>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="figures/table3.png" alt="image name" width="90%"/>
+                <p> Comparison of MIRAI with other temporal reasoning benchmarks. “Method” refers to the
+                  methodology of original and recent models evaluated on the benchmark. ICL stands for LLM w/
+                  In-Context Learning, FT stands for Task-Specific Fine-Tuning. </p>
+              </div>
+            </div>
+          </div>
+          <p>
+            In summary, MIRAI comprehensively evaluates the agents' capabilities in three dimensions: 1) 
+            autonomously source and integrate critical information from large global databases; 
+            2) write codes using domain-specific APIs and libraries for tool-use; and 3) jointly reason over 
+            historical knowledge from diverse formats and time to accurately predict future events. 
+          </p>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="figures/framework-new.png" alt="image name" width="90%"/>
+                <p>
+                  Overview of the LLM agent's interaction with the multi-source environment using the ReAct 
+                  strategy for forecasting a query event. The framework consists of three main steps: 
+                  (1) <b>Think</b>: The agent analyzes the current status and plans the next action based on the 
+                  query and the provided API specifications. (2) <b>Act</b>: The agent generates a Single Function call 
+                  or a Code Block to retrieve and analyze relevant data from the database. (3) <b>Execute</b>: The Python interpreter runs the generated code with the API implementation and database and produces observations. These steps are iteratively performed until the agent reaches a final forecast for the future relation.
+                </p>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="figures/gpt-4o-example.png" alt="image name" width="90%"/>
+                <p> A query and output example of GPT-4o-based agent.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Experiments -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiments</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our experiment section begins with comparing the forecasting performance of different agent methods with different prediction horizons. Moreover, we evaluate agents with different base language models, 
+            and finally analyze several key aspects to understand agents' behavior. 
+          </p>
+          <p>
+            <b>Evaluate Forecasting with Different Agent Methods and Tools</b>. To investigate the effect of different tools (APIs) and agent tool-use strategies, we use 
+            gpt-3.5-turbo-0125 as the base model and evaluate on the 705 queries in the test set. 
+            For all experiments, we set the model temperature to 0.4 and run 5 times to calculate the mean 
+            and standard deviation.
+          </p>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="figures/table1.png" alt="image name" width="90%"/>
+                <p> Experimental results on the test set with different agent tools and the tool-use strategies. </p>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="figures/table2.png" alt="image name" width="90%"/>
+                <p> Experimental results on the test subset using different base LLMs and action types.</p>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="figures/table4.png" alt="image name" width="90%"/>
+                <p> 
+                  Average number of ReAct iterations and the number of test cases ending in different final status.
+                </p>
+              </div>
+            </div>
+          </div>
+          <p>
+            <b>Evaluate Forecasting with Different Base LLMs</b>. We further investigate the role of the underlying LLMs in the agent's performance. 
+            We evaluate both open-sourced LLM Mistral-7B-Instruct-v0.2 and close-sourced LLMs including 
+            gpt-3.5-turbo-0125, gpt-4-turbo-2024-04-09, and the recently released gpt-4o-2024-05-13. 
+            Comparisons are done on a data-balanced test subset comprising 100 queries, with all models 
+            evaluated under the ReAct framework, allowing access to all APIs. 
+          </p>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="figures/multi_rounds.png" alt="image name" width="70%"/>
+                <p> Self-consistency of Mistral-7B model increases with more samples. </p>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="figures/single_function.png" alt="image name" width="90%"/>
+                <p> F1 Accuracy for each API function.</p>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="figures/error_analysis.png" alt="image name" width="90%"/>
+                <p> Code execution error analysis for different LLMs.</p>
+              </div>
+            </div>
+          </div>
+          <p>
+            <b>Code execution error analysis</b>. Our implemented agents interact with tools via code but often encounter execution error. 
+            We can see that invalid dates and invalid attributes are the two most frequent errors, with even gpt-4-turbo exhibiting a frequency of such errors. 
+            Notably, gpt-4o makes significantly fewer execution errors.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Analysis of Agent Behaviours -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">Analysis of Agent Behaviours</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>Impact of temporal distance of the forecasting target.</b> 
+            Our defined event forecasting task varies by temporal distance l, 
+            which specifies how far into the future we want to predict. 
+            As the temporal distance increases, the F1 score decreases and 
+            KL-divergence increases. This indicates that the agent's ability 
+            to provide accurate predictions diminishes for events further 
+            in the future. To comprehensively benchmark the 
+            forecasting capabilities of LLM agents, we should focus on 
+            long-term predictions such as those spanning 30 or 90 days.  
+          </p>
+          <p>
+            <b>Forecasting accuracy on different relation types.</b> 
+            We split the datasets into distinct quadratic relation classes and 
+            compute the F1 score for each class. All models exhibit significantly 
+            higher performance for ``verbal cooperation'' and ``material conflict'', 
+            while lower in the other two categories.
+          </p>
+        </div>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="figures/first_by_quad.png" alt="image name" width="90%"/>
+              <p> F1 scores of
+                different base LLM agents on relation prediction, categorized based on the quadratic classes. </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="figures/temporal_distance_f1.png" alt="image name" width="70%"/>
+              <p> Evaluation of LLM Agents in different temporal distances of the forecasting event. </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="figures/temporal_distance_kl.png" alt="image name" width="70%"/>
+              <p> Evaluation of LLM Agents in different temporal distances of the forecasting event.</p>
+            </div>
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            <b>How tool-use ordering influences forecasting.</b> We further investigate the impact of action 
+            order on the GPT-4o agent in ``Single Function'' mode. We show the transition graph from the 
+            initial query to the correct final answer, with thicker edges indicating more frequent 
+            transitions. Typically, the agent begins with get_relation_distribution or get_event 
+            to gather an initial set of recent and frequent events for key information, and often concludes 
+            with browse_news_article and get_news_articles, which retrieve news content to make accurate 
+            forecasts. We also subtract the frequency of incorrect predictions from those of correct 
+            predictions, where red edges represent sequences typically leading to accurate outcomes, 
+            and blue edges indicate error-prone path. 
+          </p>
+      </div>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="figures/transition.png" alt="image name" width="80%"/>
+              <p> Tool-Use Transition Graph of called API functions. Edge thickness indicates transition frequency. </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="figures/weight.png" alt="image name" width="80%"/>
+              <p> Freq.(correct) - Freq.(incorrect), in which red (blue) edges indicate positive (negative) contributions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Prompts -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">Prompts</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>System prompts.</b> The system prompt provides the necessary background information, task description, and guidelines
+            for the LLM agent. In our case, we introduce the forecasting task, basic information of the database,
+            the defined API, and the planning strategies in the system prompt. 
+          </p>
+        </div>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="figures/sys_prompt1.png" alt="image name" width="65%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="figures/sys_prompt2.png" alt="image name" width="65%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="figures/sys_prompt3.png" alt="image name" width="65%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="figures/sys_prompt4.png" alt="image name" width="65%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="figures/sys_prompt5.png" alt="image name" width="65%"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="figures/sys_prompt6.png" alt="image name" width="65%"/>
+            </div>
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          <p><b> Query prompt. </b></p>
+        </div>
+        <img src="figures/query_prompt.png" alt="geometric reasoning" width="65%"/>
+        <div class="content has-text-justified">
+          <p><b> Answer extraction prompt. </b></p>
+        </div>
+        <img src="figures/answer_prompt.png" alt="geometric reasoning" width="65%"/>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <!-- <div class="container"> -->
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+</footer>
+
+</body>
+</html>
