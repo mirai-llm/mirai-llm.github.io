@@ -1,155 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="MIRAI: Evaluating LLM Agents for Event Forecasting">
+  <meta name="description" content="MIRAI: Evaluating LLM Agents for Event Forecasting">
   <meta name="keywords" content="MIRAI, agent, event forecast">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> MIRAI: Evaluating LLM Agents for Event Forecasting </title>
+  <title>MIRAI: Evaluating LLM Agents for Event Forecasting</title>
   <link rel="icon" type="image/x-icon" href="figures/graph.ico">
-
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/explorer-index.js"></script>
-
 </head>
 <body>
-
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://yecchen.github.io/">
-        <span class="icon">
-            <i class="fas fa-home"></i>
-        </span>
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
-      <a class="navbar-item" href="https://acbull.github.io/">
-        <span class="icon">
-            <i class="fas fa-home"></i>
-        </span>
-      </a>
-      <a class="navbar-item" href="https://sites.google.com/g.ucla.edu/yihedeng/home">
-        <span class="icon">
-            <i class="fas fa-home"></i>
-        </span>
-      </a>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="https://yecchen.github.io/">
+          <span class="icon"><i class="fas fa-home"></i></span>
         </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://openreview.net/forum?id=ltUrSryS0K">
-            <b>AvalonBench</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
-          </a>
-          <a class="navbar-item" href="https://arxiv.org/abs/2307.10635">
-            <b>SciBench</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
-          </a>
+        <a class="navbar-item" href="https://acbull.github.io/">
+          <span class="icon"><i class="fas fa-home"></i></span>
+        </a>
+        <a class="navbar-item" href="https://sites.google.com/g.ucla.edu/yihedeng/home">
+          <span class="icon"><i class="fas fa-home"></i></span>
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">More Research</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://openreview.net/forum?id=ltUrSryS0K"><b>AvalonBench</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p></a>
+            <a class="navbar-item" href="https://arxiv.org/abs/2307.10635"><b>SciBench</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p></a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title is-bold">
-            <!-- <span class="mathvista" style="vertical-align: middle">MIRAI</span> -->
-            <span>MIRAI: Evaluating LLM Agents for Event Forecasting</span>
-          </h1>
-          <!-- <h2 class="subtitle is-3 publication-subtitle">
-            MIRAI: Evaluating LLM Agents for Event Forecasting
-          </h2> -->
-          <div class="is-size-4 publication-authors">
-            <span class="author-block">
-              <a href="https://yecchen.github.io/">Chenchen Ye</a>*<sup style="color:#005587;">1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://acbull.github.io/">Ziniu Hu</a>*<sup style="color:#FDB515">2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://sites.google.com/g.ucla.edu/yihedeng/home">Yihe Deng</a>*<sup style="color:#005587;">1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://zijieh.github.io/">Zijie Huang</a><sup style="color:#005587">1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://derek.ma/">Mingyu Derek Ma</a><sup style="color:#005587">1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://sxkdz.github.io/">Yanqiao Zhu</a><sup style="color:#005587;">1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://web.cs.ucla.edu/~weiwang/">Wei Wang</a><sup style="color:#005587">1</sup>
-            </span>
-          </div>
-
-          <div class="is-size-4 publication-authors">
-            <span class="author-block"><sup style="color:#005587;">1</sup>University of California, Los Angeles,</span><br>
-            <span class="author-block"><sup style="color:#FDB515">2</sup>California Institute of Technology,</span>
-            <span class="paper-block"><b >* Equal Contribution</b> </span>
-          </div>
-
+  <section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
+            <h1 class="title is-1">MIRAI: Evaluating LLM Agents for Event Forecasting</h1>
+            <div class="is-size-4 publication-authors">
+              <span class="author-block"><a href="https://yecchen.github.io/">Chenchen Ye</a>*<sup style="color:#005587;">1</sup>,</span>
+              <span class="author-block"><a href="https://acbull.github.io/">Ziniu Hu</a>*<sup style="color:#FDB515">2</sup>,</span>
+              <span class="author-block"><a href="https://sites.google.com/g.ucla.edu/yihedeng/home">Yihe Deng</a>*<sup style="color:#005587;">1</sup>,</span>
+              <span class="author-block"><a href="https://zijieh.github.io/">Zijie Huang</a><sup style="color:#005587">1</sup>,</span>
+              <span class="author-block"><a href="https://derek.ma/">Mingyu Derek Ma</a><sup style="color:#005587">1</sup>,</span>
+              <span class="author-block"><a href="https://sxkdz.github.io/">Yanqiao Zhu</a><sup style="color:#005587;">1</sup>,</span>
+              <span class="author-block"><a href="https://web.cs.ucla.edu/~weiwang/">Wei Wang</a><sup style="color:#005587">1</sup></span>
+            </div>
+            <div class="is-size-4 publication-authors">
+              <span class="author-block"><sup style="color:#005587;">1</sup>University of California, Los Angeles,</span><br>
+              <span class="author-block"><sup style="color:#FDB515">2</sup>California Institute of Technology,</span>
+              <span class="paper-block"><b>* Equal Contribution</b></span>
+            </div>
             <div class="publication-links">
-              <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://anonymous.4open.science/r/ForecastAgent-3419/README.md"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
+                <a href="https://anonymous.4open.science/r/ForecastAgent-3419/README.md" class="external-link button is-rounded is-dark"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a>
               </span>
-              <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://drive.google.com/file/d/1j6LqI8i5eRVemWsIJge8L4lGQyPiNiTs/view"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <p style="font-size:18px">🤗</p>
-                  </span>
-                  <span>Data</span>
-                </a>
+                <a href="https://drive.google.com/file/d/1j6LqI8i5eRVemWsIJge8L4lGQyPiNiTs/view" class="external-link button is-rounded is-dark"><span class="icon"><p style="font-size:18px">🤗</p></span><span>Data</span></a>
               </span>
-              <!-- Demo Link. -->
               <span class="link-block">
-                <a href="https://drive.google.com/file/d/1kKvYdAYv5hed-sbF_QE1moP-dQbfYoXI/view"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <p style="font-size:18px">🤗</p>
-                  </span>
-                  <span>Demo</span>
-                </a>
+                <a href="https://drive.google.com/file/d/1kKvYdAYv5hed-sbF_QE1moP-dQbfYoXI/view" class="external-link button is-rounded is-dark"><span class="icon"><p style="font-size:18px">🤗</p></span><span>Demo</span></a>
               </span>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 <section class="hero teaser">
