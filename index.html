@@ -14,6 +14,23 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  <style>
+    .navbar.is-fixed-top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 30;
+    }
+    .navbar-menu {
+      flex-grow: 1;
+      justify-content: center;
+    }
+    .navbar-item.active {
+      background-color: #00d1b2;
+      color: white;
+    }
+  </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
@@ -23,29 +40,20 @@
 <body>
   <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+      <a class="navbar-item" href="https://yecchen.github.io/">
+        <span class="icon"><i class="fas fa-home"></i></span>
       </a>
-    </div>
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="https://yecchen.github.io/">
-          <span class="icon"><i class="fas fa-home"></i></span>
-        </a>
-        <a class="navbar-item" href="https://acbull.github.io/">
-          <span class="icon"><i class="fas fa-home"></i></span>
-        </a>
-        <a class="navbar-item" href="https://sites.google.com/g.ucla.edu/yihedeng/home">
-          <span class="icon"><i class="fas fa-home"></i></span>
-        </a>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">More Research</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://openreview.net/forum?id=ltUrSryS0K"><b>AvalonBench</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p></a>
-            <a class="navbar-item" href="https://arxiv.org/abs/2307.10635"><b>SciBench</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p></a>
-          </div>
+      <a class="navbar-item" href="https://acbull.github.io/">
+        <span class="icon"><i class="fas fa-home"></i></span>
+      </a>
+      <a class="navbar-item" href="https://sites.google.com/g.ucla.edu/yihedeng/home">
+        <span class="icon"><i class="fas fa-home"></i></span>
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">More Research</a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://openreview.net/forum?id=ltUrSryS0K"><b>AvalonBench</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p></a>
+          <a class="navbar-item" href="https://arxiv.org/abs/2307.10635"><b>SciBench</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p></a>
         </div>
       </div>
     </div>
