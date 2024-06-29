@@ -39,7 +39,7 @@ h6 {
   font-size: 2.5rem;
   margin-bottom: 0.8rem;
   color: white; /* Title color */
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
 }
 
 .publication-authors {
@@ -125,12 +125,6 @@ h6 {
   font-size: 1.2rem; /* Increase font size for links */
 }
 
-.mathvista {
-  font-variant: small-caps;
-  font-weight: bold;
-  font-size: 1.5rem; /* Increase font size */
-}
-
 .teaser .hero-body {
   padding-top: 1rem;
   padding-bottom: 3rem;
@@ -142,7 +136,8 @@ h6 {
 }
 
 /* Publication sections font size */
-.publication-title, .publication-authors {
+
+.publication-authors {
   font-family: 'Google Sans', sans-serif;
   font-size: 2.5rem; /* Increase font size */
 }
@@ -164,14 +159,15 @@ h6 {
 .publication-title {
       font-size: 3rem; /* Larger font size for the main title */
       font-weight: bold;
-      margin-bottom: 0; /* Remove bottom margin to bring subtitle closer */
+      margin-bottom: 0.5rem; /* Remove bottom margin to bring subtitle closer */
       color: white; /* Title color */
     }
 
 .publication-subtitle {
-  font-size: 1.5rem; /* Smaller font size for the subtitle */
+  font-size: 1.8rem; /* Smaller font size for the subtitle */
   margin-top: 0.5rem; /* Adjust margin to bring the subtitle closer to the title */
   margin-bottom: 1rem;
+  font-weight: bold;
   color: white !important; /* Subtitle color */
 }
 
