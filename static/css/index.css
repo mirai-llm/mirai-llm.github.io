@@ -57,14 +57,6 @@ h6 {
   transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.author-link:hover {
-  color: #b2182b; /* Author link hover color */
-}
-
-.sup-color {
-  color: #ffeb3b; /* Superscript color */
-}
-
 .publication-affiliations {
   margin-bottom: 1rem;
   color: white; /* Affiliations color */
@@ -85,20 +77,6 @@ h6 {
 .navbar-item {
   color: #333; /* Default text color */
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
-}
-
-.navbar-item:hover {
-  background-color: #2166ac; /* Hover background color */
-  color: white; /* Hover text color */
-}
-
-.navbar-item:hover .icon {
-  color: #2166ac; /* Ensure icons also change color on hover */
-}
-
-.navbar-link:hover {
-  background-color: #2166ac; /* Hover background color for dropdown link */
-  color: white; /* Hover text color for dropdown link */
 }
 
 .navbar-dropdown .navbar-item:hover {
