@@ -29,12 +29,6 @@ h6 {
 }
 
 .hero-body {
-  padding-top: 2rem; /* Reduce padding to bring elements closer together */
-  padding-bottom: 2rem;
-  background-color: #f8f9fa; /* Subtle background color */
-  border-bottom: 2px solid #e0e0e0; /* Bottom border */
-}
-.hero-custom {
   background-color: #2166ac; /* Change background color */
   color: white; /* Default text color to white for readability */
   padding-top: 2rem;
