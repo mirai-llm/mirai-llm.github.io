@@ -4,7 +4,7 @@ body {
 
 
 .footer .icon-link {
-    font-size: 25px;
+    font-size: 28px;
     color: #000;
 }
 
@@ -20,7 +20,7 @@ body {
 
 
 .teaser .hero-body {
-  padding-top: 0;
+  padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
