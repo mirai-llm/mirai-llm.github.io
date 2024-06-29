@@ -127,7 +127,7 @@ h6 {
 
 .teaser .hero-body {
   padding-top: 1rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   font-size: 1.5rem; /* Increase font size */
 }
 
@@ -166,7 +166,7 @@ h6 {
 .publication-subtitle {
   font-size: 1.8rem; /* Smaller font size for the subtitle */
   margin-top: 0.5rem; /* Adjust margin to bring the subtitle closer to the title */
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   font-weight: bold;
   color: white !important; /* Subtitle color */
 }
