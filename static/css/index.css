@@ -34,30 +34,59 @@ h6 {
   background-color: #f8f9fa; /* Subtle background color */
   border-bottom: 2px solid #e0e0e0; /* Bottom border */
 }
+.hero-custom {
+  background-color: #2166ac; /* Change background color */
+  color: white; /* Default text color to white for readability */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 
 .publication-title {
-  font-size: 2.5rem; /* Slightly reduce font size */
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: white; /* Title color */
 }
 
 .publication-authors {
-  margin-bottom: 0.5rem; /* Reduce bottom margin */
+  margin-bottom: 0.5rem;
 }
 
 .author-block {
   display: inline-block;
-  margin-right: 0.3rem; /* Reduce margin between authors */
-  margin-bottom: 0.3rem; /* Reduce bottom margin */
-  font-size: 1.1rem; /* Slightly reduce font size */
+  margin-right: 0.3rem;
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+}
+
+.author-link {
+  color: #ffeb3b; /* Author link color */
+}
+
+.author-link:hover {
+  color: #ffd700; /* Author link hover color */
+}
+
+.sup-color {
+  color: #ffeb3b; /* Superscript color */
 }
 
 .publication-affiliations {
-  margin-bottom: 1rem; /* Reduce bottom margin */
+  margin-bottom: 1rem;
+  color: white; /* Affiliations color */
 }
 
 .publication-links .button {
-  margin: 0.3rem; /* Reduce margin between buttons */
+  margin: 0.3rem;
+  color: #2166ac; /* Button text color */
+  background-color: white; /* Button background color */
+  border-color: white; /* Button border color */
 }
+
+.publication-links .button:hover {
+  background-color: #f0f0f0; /* Button hover background color */
+  border-color: #f0f0f0; /* Button hover border color */
+}
+
 
 /* Navigation bar font size */
 .navbar-item .icon {
