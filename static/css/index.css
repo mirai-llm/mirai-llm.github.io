@@ -5,35 +5,35 @@ body {
 }
 
 h1, .hero-body {
-  font-size: 3.2rem;
-}
-
-h2 {
   font-size: 2.8rem;
 }
 
-h3 {
-  font-size: 2.6rem;
-}
-
-h4 {
+h2 {
   font-size: 2.4rem;
 }
 
-h5 {
-  font-size: 2.2rem;
-}
-
-h6 {
+h3 {
   font-size: 2.0rem;
 }
 
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
 .navbar-item {
-  font-size: 2.0rem; /* Increase font size for navigation items */
+  font-size: 1.5rem; /* Increase font size for navigation items */
 }
 
 .navbar-link {
-  font-size: 2.0rem; /* Increase font size for dropdown links */
+  font-size: 1.5rem; /* Increase font size for dropdown links */
 }
 
 /* Footer font size */
