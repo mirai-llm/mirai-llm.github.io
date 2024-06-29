@@ -157,7 +157,7 @@ h6 {
 }
 
 .publication-title {
-      font-size: 4rem; /* Larger font size for the main title */
+      font-size: 6rem; /* Larger font size for the main title */
       font-weight: bold;
       margin-bottom: 0.5rem; /* Remove bottom margin to bring subtitle closer */
       color: white; /* Title color */
