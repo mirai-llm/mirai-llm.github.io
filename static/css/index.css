@@ -93,7 +93,7 @@ h6 {
 }
 
 .navbar-item:hover .icon {
-  color: white; /* Ensure icons also change color on hover */
+  color: #2166ac; /* Ensure icons also change color on hover */
 }
 
 .navbar-link:hover {
@@ -103,7 +103,7 @@ h6 {
 
 .navbar-dropdown .navbar-item:hover {
   background-color: #2166ac; /* Hover background color for dropdown items */
-  color: white; /* Hover text color for dropdown items */
+  color: #2166ac; /* Hover text color for dropdown items */
 }
 
 /* Navigation bar font size */
