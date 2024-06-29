@@ -258,13 +258,17 @@
         <h2 class="title is-3">The MIRAI Benchmark</h2>
         <div class="content has-text-justified">
           <p>
-            Our benchmark features an agentic environment with tools for accessing an extensive database of historical, structured events and textual news articles. We refine the <a href="https://www.gdeltproject.org/">GDELT</a> event database with careful cleaning and parsing to curate a series of relational prediction tasks with varying forecasting horizons, assessing LLM agents' abilities from short-term to long-term forecasting.
+            We refine the <a href="https://www.gdeltproject.org/">GDELT</a> event database with careful 
+            cleaning and parsing to curate a series of relational prediction tasks with varying forecasting 
+            horizons, assessing LLM agents' abilities from short-term to long-term forecasting.
           </p>
           <div id="results-carousel" class="carousel results-carousel">
             <div class="box m-5">
               <div class="content has-text-centered">
                 <img src="figures/dataset.png" alt="geometric reasoning" width="100%"/>
-            <p> An example of forecasting the relations between Australia and China on Nov.18.2023. The database contains query-related historical relations and news articles, while the agent fails to predict the change of relation and makes a wrong forecast.</p>
+            <p> An example of forecasting the relations between Australia and China on Nov.18.2023. 
+              The database contains query-related historical relations and news articles, 
+              while the agent fails to predict the change of relation and makes a wrong forecast.</p>
               </div>
             </div>
             <div class="box m-5">
@@ -277,10 +281,10 @@
             </div>
           </div>
           <p>
-            In summary, MIRAI comprehensively evaluates the agents' capabilities in three dimensions: 1) 
-            autonomously source and integrate critical information from large global databases; 
-            2) write codes using domain-specific APIs and libraries for tool-use; and 3) jointly reason over 
-            historical knowledge from diverse formats and time to accurately predict future events. 
+            MIRAI comprehensively evaluates the agents' capabilities in three dimensions: 1) 
+            <b>autonomously source and integrate</b> critical information from large global databases; 
+            2) <b>write codes</b> using domain-specific APIs and libraries for tool-use; and 3) <b>jointly reason</b> 
+            over historical knowledge from diverse formats and time to accurately predict future events. 
           </p>
           <div id="results-carousel" class="carousel results-carousel">
             <div class="box m-5">
@@ -291,7 +295,8 @@
                   strategy for forecasting a query event. The framework consists of three main steps: 
                   (1) <b>Think</b>: The agent analyzes the current status and plans the next action based on the 
                   query and the provided API specifications. (2) <b>Act</b>: The agent generates a Single Function call 
-                  or a Code Block to retrieve and analyze relevant data from the database. (3) <b>Execute</b>: The Python interpreter runs the generated code with the API implementation and database and produces observations. These steps are iteratively performed until the agent reaches a final forecast for the future relation.
+                  or a Code Block to retrieve and analyze relevant data from the database. 
+                  (3) <b>Execute</b>: The Python interpreter runs the generated code with the API implementation and database and produces observations. These steps are iteratively performed until the agent reaches a final forecast for the future relation.
                 </p>
               </div>
             </div>
@@ -347,9 +352,8 @@
             </div>
           </div>
           <p>
-            <b>Evaluate Forecasting with Different Base LLMs</b>. We further investigate the role of the underlying LLMs in the agent's performance. 
-            We evaluate both open-sourced LLM Mistral-7B-Instruct-v0.2 and close-sourced LLMs including 
-            gpt-3.5-turbo-0125, gpt-4-turbo-2024-04-09, and the recently released gpt-4o-2024-05-13. 
+            <b>Evaluate Forecasting with Different Base LLMs</b>. We further investigate the role of the 
+            underlying LLMs in the agent's performance. 
           </p>
           <div id="results-carousel" class="carousel results-carousel">
             <div class="box m-5">
@@ -373,7 +377,7 @@
           </div>
           <p>
             <b>Code execution error analysis</b>. Our implemented agents interact with tools via code but often encounter execution error. 
-            We can see that invalid dates and invalid attributes are the two most frequent errors, with even gpt-4-turbo exhibiting a frequency of such errors. 
+            We can see that invalid dates and invalid attributes are the two most frequent errors even for gpt-4-turbo. 
             Notably, gpt-4o makes significantly fewer execution errors.
           </p>
         </div>
@@ -411,7 +415,8 @@
             <div class="content has-text-centered">
               <img src="figures/first_by_quad.png" alt="image name" width="90%"/>
               <p> F1 scores of
-                different base LLM agents on relation prediction, categorized based on the quadratic classes. </p>
+                different base LLM agents on relation prediction, 
+                categorized based on the quadratic classes. </p>
             </div>
           </div>
           <div class="box m-5">
@@ -440,7 +445,8 @@
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="figures/transition.png" alt="image name" width="80%"/>
-              <p> Tool-Use Transition Graph of called API functions. Edge thickness indicates transition frequency. </p>
+              <p> Tool-Use Transition Graph of called API functions. 
+                Edge thickness indicates transition frequency. </p>
             </div>
           </div>
           <div class="box m-5">
