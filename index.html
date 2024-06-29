@@ -37,7 +37,25 @@
       display: none;
     }
     .hero-body {
-      padding-top: 6rem; /* Adjust this value to increase/decrease the space */
+      padding-top: 4rem; /* Adjust this value to increase/decrease the space */
+    }
+    /* Title background and text colors */
+    .hero.is-primary {
+      background-color: #2c3e50; /* Dark Blue */
+      color: #ecf0f1; /* Light Gray */
+    }
+    .hero.is-primary .title {
+      color: #ecf0f1; /* Light Gray */
+    }
+    .hero.is-primary .subtitle {
+      color: #bdc3c7; /* Light Gray */
+    }
+    /* Author's name colors */
+    .publication-authors a {
+      color: #ecf0f1; /* Light Gray */
+    }
+    .publication-authors a:hover {
+      color: #e74c3c; /* Red */
     }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -45,29 +63,6 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/explorer-index.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const sections = document.querySelectorAll('section');
-      const navLi = document.querySelectorAll('.navbar-item');
-
-      window.onscroll = () => {
-        let current = '';
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop;
-          if (scrollY >= sectionTop - 60) {
-            current = section.getAttribute('id');
-          }
-        });
-
-        navLi.forEach(li => {
-          li.classList.remove('active');
-          if (li.getAttribute('href').includes(current)) {
-            li.classList.add('active');
-          }
-        });
-      };
-    });
-  </script>
 </head>
 <body>
   <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
@@ -97,8 +92,8 @@
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">More Research</a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://avalonbench.github.io/"><b>AvalonBench</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p></a>
-          <a class="navbar-item" href="https://scibench-ucla.github.io/"><b>SciBench</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p></a>
+          <a class="navbar-item" href="https://openreview.net/forum?id=ltUrSryS0K"><b>AvalonBench</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p></a>
+          <a class="navbar-item" href="https://arxiv.org/abs/2307.10635"><b>SciBench</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p></a>
         </div>
       </div>
     </div>
