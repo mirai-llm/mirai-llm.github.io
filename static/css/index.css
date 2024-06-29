@@ -29,6 +29,20 @@ h6 {
 }
 
 /* Navigation bar font size */
+.navbar-item .icon {
+  margin-right: 0.5rem; /* Adjust spacing between icon and text */
+}
+
+.navbar-item span.icon {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-item span {
+  display: inline-flex;
+  align-items: center;
+}
+
 .navbar-item {
   font-size: 1.5rem; /* Increase font size for navigation items */
 }
