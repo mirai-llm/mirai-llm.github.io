@@ -87,6 +87,29 @@ h6 {
   border-color: #f0f0f0; /* Button hover border color */
 }
 
+.navbar-item {
+  color: #333; /* Default text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+.navbar-item:hover {
+  background-color: #2166ac; /* Hover background color */
+  color: white; /* Hover text color */
+}
+
+.navbar-item:hover .icon {
+  color: white; /* Ensure icons also change color on hover */
+}
+
+.navbar-link:hover {
+  background-color: #2166ac; /* Hover background color for dropdown link */
+  color: white; /* Hover text color for dropdown link */
+}
+
+.navbar-dropdown .navbar-item:hover {
+  background-color: #2166ac; /* Hover background color for dropdown items */
+  color: white; /* Hover text color for dropdown items */
+}
 
 /* Navigation bar font size */
 .navbar-item .icon {
