@@ -45,6 +45,15 @@ h6 {
   margin-bottom: 0.3rem;
 }
 
+/* Author's name colors */
+.publication-authors a {
+  color: #ecf0f1 !important; /* Light Gray */
+}
+
+.publication-authors a:hover {
+  color: #e74c3c !important; /* Red */
+}
+
 .author-block {
   display: inline-block;
   margin-right: 0.3rem;
