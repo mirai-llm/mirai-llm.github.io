@@ -61,6 +61,11 @@ h6 {
   font-size: 1.1rem;
 }
 
+.author-link {
+  color: white; /* Author link color */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
 .publication-affiliations {
   margin-bottom: 1rem;
   color: white; /* Affiliations color */
