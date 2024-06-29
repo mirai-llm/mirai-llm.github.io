@@ -29,15 +29,15 @@ h6 {
 }
 
 .hero-body {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   background-color: #f8f9fa; /* Subtle background color */
-  border-bottom: 2px solid #e0e0e0; /* Bottom border */
+  border-bottom: 1px solid #e0e0e0; /* Bottom border */
 }
 
 /* Navigation bar font size */
 .navbar-item .icon {
-  margin-right: 0.5rem; /* Adjust spacing between icon and text */
+  margin-right: 0.2rem; /* Adjust spacing between icon and text */
 }
 
 .navbar-item span.icon {
