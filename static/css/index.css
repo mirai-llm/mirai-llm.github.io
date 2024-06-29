@@ -31,8 +31,8 @@ h6 {
 .hero-body {
   padding-top: 2rem; /* Reduce padding to bring elements closer together */
   padding-bottom: 2rem;
-  background-color: #2166ac; /* Subtle background color */
-  border-bottom: 2px solid #053061; /* Bottom border */
+  background-color: #f8f9fa; /* Subtle background color */
+  border-bottom: 2px solid #e0e0e0; /* Bottom border */
 }
 
 .publication-title {
