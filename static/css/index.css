@@ -65,8 +65,8 @@ h6 {
 
 /* Link block font size */
 .link-block a {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   font-size: 1.2rem; /* Increase font size for links */
 }
 
@@ -161,8 +161,8 @@ h6 {
 .org-banner {
   max-width: 100%;
   height: 6em;
-  margin: 10px;
-  padding: 10px;
+  margin: 8px;
+  padding: 8px;
 }
 
 @media screen and (max-width: 768px) {
