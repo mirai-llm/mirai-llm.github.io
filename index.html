@@ -14,51 +14,71 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <style>
+<style>
+    body {
+      background-color: #2c3e50; /* Dark Blue */
+      color: #ecf0f1; /* Light Gray for text */
+    }
+
     .navbar.is-fixed-top {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       z-index: 30;
+      background-color: #2c3e50; /* Dark Blue */
     }
+
     .navbar-menu {
       flex-grow: 1;
       justify-content: space-between;
     }
+
     .navbar-item.active {
       background-color: #00d1b2;
       color: white;
     }
+
     .navbar-item.has-dropdown:hover .navbar-dropdown {
       display: block;
     }
+
     .navbar-dropdown {
       display: none;
     }
+
     .hero-body {
-      padding-top: 6rem; /* Adjust this value to increase/decrease the space */
+      padding-top: 4rem; /* Adjust this value to increase/decrease the space */
     }
+
+    /* Title background and text colors */
     .hero.is-primary {
       background-color: #2c3e50 !important; /* Dark Blue */
       color: #ecf0f1 !important; /* Light Gray */
     }
+
     .hero.is-primary .title {
       color: #ecf0f1 !important; /* Light Gray */
     }
+
     .hero.is-primary .subtitle {
       color: #bdc3c7 !important; /* Light Gray */
     }
+
     /* Author's name colors */
     .publication-authors a {
       color: #ecf0f1 !important; /* Light Gray */
     }
+
     .publication-authors a:hover {
       color: #e74c3c !important; /* Red */
     }
+
+    /* Additional styles to ensure readability */
     .container, .content, .hero-body, .footer {
       color: #ecf0f1 !important;
     }
+
     .section {
       background-color: #2c3e50 !important; /* Dark Blue */
     }
