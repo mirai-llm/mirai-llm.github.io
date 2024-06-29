@@ -5,50 +5,60 @@ body {
 }
 
 h1, .hero-body {
-  font-size: 3rem;
+  font-size: 3.2rem;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
 }
 
 h3 {
-  font-size: 2.25rem;
+  font-size: 2.6rem;
 }
 
 h4 {
-  font-size: 2rem;
+  font-size: 2.4rem;
 }
 
 h5 {
-  font-size: 1.75rem;
+  font-size: 2.2rem;
 }
 
 h6 {
-  font-size: 1.5rem;
+  font-size: 2.0rem;
 }
 
+.navbar-item {
+  font-size: 2.0rem; /* Increase font size for navigation items */
+}
+
+.navbar-link {
+  font-size: 2.0rem; /* Increase font size for dropdown links */
+}
+
+/* Footer font size */
 .footer .icon-link {
   font-size: 30px;
   color: #000;
 }
 
+/* Link block font size */
 .link-block a {
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 1.2rem; /* Increase font size for links */
+  font-size: 2.0rem; /* Increase font size for links */
 }
 
 .mathvista {
   font-variant: small-caps;
   font-weight: bold;
-  font-size: 1.5rem; /* Increase font size */
+  font-size: 2.0rem; /* Increase font size */
 }
 
 .teaser .hero-body {
   padding-top: 1rem;
   padding-bottom: 3rem;
-  font-size: 1.5rem; /* Increase font size */
+  font-size: 2.0rem; /* Increase font size */
 }
 
 .teaser {
