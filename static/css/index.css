@@ -1,5 +1,31 @@
 body {
   font-family: 'Noto Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+h1, .hero-body {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
 }
 
 
