@@ -18,6 +18,33 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 
+  <style>
+    .navbar.is-fixed-top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 30;
+    }
+    .navbar-menu {
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+    .navbar-item.active {
+      background-color: #00d1b2;
+      color: white;
+    }
+    .navbar-item.has-dropdown:hover .navbar-dropdown {
+      display: block;
+    }
+    .navbar-dropdown {
+      display: none;
+    }
+    .hero-body {
+      padding-top: 6rem; /* Adjust this value to increase/decrease the space */
+    }
+  </style>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
