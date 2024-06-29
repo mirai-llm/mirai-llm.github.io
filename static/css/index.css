@@ -29,10 +29,34 @@ h6 {
 }
 
 .hero-body {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 2rem; /* Reduce padding to bring elements closer together */
+  padding-bottom: 2rem;
   background-color: #f8f9fa; /* Subtle background color */
-  border-bottom: 1px solid #e0e0e0; /* Bottom border */
+  border-bottom: 2px solid #e0e0e0; /* Bottom border */
+}
+
+.publication-title {
+  font-size: 2.5rem; /* Slightly reduce font size */
+  margin-bottom: 1rem;
+}
+
+.publication-authors {
+  margin-bottom: 0.5rem; /* Reduce bottom margin */
+}
+
+.author-block {
+  display: inline-block;
+  margin-right: 0.3rem; /* Reduce margin between authors */
+  margin-bottom: 0.3rem; /* Reduce bottom margin */
+  font-size: 1.1rem; /* Slightly reduce font size */
+}
+
+.publication-affiliations {
+  margin-bottom: 1rem; /* Reduce bottom margin */
+}
+
+.publication-links .button {
+  margin: 0.3rem; /* Reduce margin between buttons */
 }
 
 /* Navigation bar font size */
