@@ -4,7 +4,7 @@ body {
 
 
 .footer .icon-link {
-    font-size: 28px;
+    font-size: 25px;
     color: #000;
 }
 
@@ -20,7 +20,7 @@ body {
 
 
 .teaser .hero-body {
-  padding-top: 3rem;
+  padding-top: 0;
   padding-bottom: 3rem;
 }
 
@@ -69,6 +69,10 @@ body {
 }
 
 .publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
 }
 
 .publication-authors a:hover {
