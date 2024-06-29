@@ -69,7 +69,7 @@ h6 {
 /* Publication sections font size */
 .publication-title, .publication-authors {
   font-family: 'Google Sans', sans-serif;
-  font-size: 2rem; /* Increase font size */
+  font-size: 2.5rem; /* Increase font size */
 }
 
 .publication-venue {
@@ -102,7 +102,7 @@ h6 {
 
 /* Captions font size */
 .content.has-text-centered p {
-  font-size: 1.5rem; /* Increase font size for captions */
+  font-size: 1.2rem; /* Increase font size for captions */
 }
 
 .publication-video {
