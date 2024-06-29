@@ -160,6 +160,19 @@ h6 {
   font-size: 1.5rem; /* Increase font size */
 }
 
+.publication-title {
+      font-size: 3rem; /* Larger font size for the main title */
+      font-weight: bold;
+      margin-bottom: 0; /* Remove bottom margin to bring subtitle closer */
+      color: white; /* Title color */
+    }
+
+.publication-subtitle {
+  font-size: 1.5rem; /* Smaller font size for the subtitle */
+  margin-top: 0.5rem; /* Adjust margin to bring the subtitle closer to the title */
+  margin-bottom: 1rem;
+  color: white; /* Subtitle color */
+}
 
 .publication-authors a:hover {
     text-decoration: underline;
