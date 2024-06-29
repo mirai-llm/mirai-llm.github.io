@@ -42,6 +42,29 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/explorer-index.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('section');
+      const navLi = document.querySelectorAll('.navbar-item');
+
+      window.onscroll = () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          if (scrollY >= sectionTop - 60) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLi.forEach(li => {
+          li.classList.remove('active');
+          if (li.getAttribute('href').includes(current)) {
+            li.classList.add('active');
+          }
+        });
+      };
+    });
+  </script>
 </head>
 <body>
   <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
