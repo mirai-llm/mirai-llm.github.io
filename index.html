@@ -54,16 +54,15 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#introduction">Introduction</a>
+      <a class="navbar-item" href="#mirai">MIRAI Benchmark</a>
+      <a class="navbar-item" href="#experiments">Experiments</a>
+      <a class="navbar-item" href="#analysis">Analysis</a>
+      <a class="navbar-item" href="#prompts">Prompts</a>
+    </div>
+    <div class="navbar-end">
       <a class="navbar-item" href="https://yecchen.github.io/">
         <span class="icon">
             <i class="fas fa-home"></i>
@@ -80,22 +79,15 @@
         </span>
       </a>
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
+        <a class="navbar-link">More Research</a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://openreview.net/forum?id=ltUrSryS0K">
-            <b>AvalonBench</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
-          </a>
-          <a class="navbar-item" href="https://arxiv.org/abs/2307.10635">
-            <b>SciBench</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
-          </a>
+          <a class="navbar-item" href="https://openreview.net/forum?id=ltUrSryS0K"><b>AvalonBench</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p></a>
+          <a class="navbar-item" href="https://arxiv.org/abs/2307.10635"><b>SciBench</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p></a>
         </div>
       </div>
     </div>
-  </div>
-</nav>
-
+  </nav>
+  
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -192,7 +184,7 @@
 
 
 <!-- Introduction -->
-<section class="section">
+<section class="section" id="introduction">
   <div class="container" style="margin-bottom: 2vh;">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -231,7 +223,7 @@
 </section>
 
 <!-- MIRAI -->
-<section class="section">
+<section class="section" id="mirai">
   <div class="container">
     <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -290,7 +282,7 @@
 </section>
 
 <!-- Experiments -->
-<section class="section">
+<section class="section" id="experiments">
   <div class="container">
     <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -363,7 +355,7 @@
 </section>
 
 <!-- Analysis of Agent Behaviours -->
-<section class="section">
+<section class="section" id="analysis">
   <div class="container">
     <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -437,7 +429,7 @@
 </section>
 
 <!-- Prompts -->
-<section class="section">
+<section class="section" id="prompts">
   <div class="container">
     <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
