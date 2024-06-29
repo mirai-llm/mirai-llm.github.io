@@ -195,8 +195,8 @@ h6 {
   }
 
   .navbar-item {
-    font-size: 1.0rem; /* Adjust font size for navigation items on mobile */
-    padding: 0.5rem 1rem; /* Adjust padding */
+    font-size: 1.1rem; /* Adjust font size for navigation items on mobile */
+    padding: 0.3rem 0.3rem; /* Adjust padding */
   }
 
   .navbar-link {
