@@ -28,6 +28,37 @@ h6 {
   font-size: 1.5rem;
 }
 
+.hero-body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f8f9fa; /* Subtle background color */
+  border-bottom: 2px solid #e0e0e0; /* Bottom border */
+}
+
+.publication-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.publication-authors {
+  margin-bottom: 1rem;
+}
+
+.author-block {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.publication-affiliations {
+  margin-bottom: 2rem;
+}
+
+.publication-links .button {
+  margin: 0.5rem;
+}
+
 /* Navigation bar font size */
 .navbar-item .icon {
   margin-right: 0.5rem; /* Adjust spacing between icon and text */
