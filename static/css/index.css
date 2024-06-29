@@ -31,8 +31,8 @@ h6 {
 .hero-body {
   background-color: #2166ac; /* Change background color */
   color: white; /* Default text color to white for readability */
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .publication-title {
