@@ -61,26 +61,9 @@ h6 {
   font-size: 1.1rem;
 }
 
-.author-link {
-  color: white; /* Author link color */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
-}
-
 .publication-affiliations {
   margin-bottom: 1rem;
   color: white; /* Affiliations color */
-}
-
-.publication-links .button {
-  margin: 0.3rem;
-  color: #2166ac; /* Button text color */
-  background-color: white; /* Button background color */
-  border-color: white; /* Button border color */
-}
-
-.publication-links .button:hover {
-  background-color: #f0f0f0; /* Button hover background color */
-  border-color: #f0f0f0; /* Button hover border color */
 }
 
 .navbar-item {
