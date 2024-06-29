@@ -15,73 +15,90 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 <style>
-    body {
-      background-color: #2c3e50; /* Dark Blue */
-      color: #ecf0f1; /* Light Gray for text */
-    }
+body {
+  background-color: #2c3e50; /* Dark Blue */
+  color: #ecf0f1; /* Light Gray for text */
+}
 
-    .navbar.is-fixed-top {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 30;
-      background-color: #2c3e50; /* Dark Blue */
-    }
+.navbar.is-fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  background-color: #2c3e50; /* Dark Blue */
+}
 
-    .navbar-menu {
-      flex-grow: 1;
-      justify-content: space-between;
-    }
+.navbar-menu {
+  flex-grow: 1;
+  justify-content: space-between;
+}
 
-    .navbar-item.active {
-      background-color: #00d1b2;
-      color: white;
-    }
+.navbar-item {
+  color: #ecf0f1; /* Light Gray for navbar items */
+}
 
-    .navbar-item.has-dropdown:hover .navbar-dropdown {
-      display: block;
-    }
+.navbar-item.active {
+  background-color: #00d1b2;
+  color: white;
+}
 
-    .navbar-dropdown {
-      display: none;
-    }
+.navbar-item.has-dropdown:hover .navbar-dropdown {
+  display: block;
+}
 
-    .hero-body {
-      padding-top: 4rem; /* Adjust this value to increase/decrease the space */
-    }
+.navbar-dropdown {
+  display: none;
+}
 
-    /* Title background and text colors */
-    .hero.is-primary {
-      background-color: #2c3e50 !important; /* Dark Blue */
-      color: #ecf0f1 !important; /* Light Gray */
-    }
+.hero-body {
+  padding-top: 4rem; /* Adjust this value to increase/decrease the space */
+}
 
-    .hero.is-primary .title {
-      color: #ecf0f1 !important; /* Light Gray */
-    }
+/* Title background and text colors */
+.hero.is-primary {
+  background-color: #2c3e50 !important; /* Dark Blue */
+  color: #ecf0f1 !important; /* Light Gray */
+}
 
-    .hero.is-primary .subtitle {
-      color: #bdc3c7 !important; /* Light Gray */
-    }
+.hero.is-primary .title {
+  color: #ecf0f1 !important; /* Light Gray */
+}
 
-    /* Author's name colors */
-    .publication-authors a {
-      color: #ecf0f1 !important; /* Light Gray */
-    }
+.hero.is-primary .subtitle {
+  color: #bdc3c7 !important; /* Light Gray */
+}
 
-    .publication-authors a:hover {
-      color: #e74c3c !important; /* Red */
-    }
+/* Author's name colors */
+.publication-authors a {
+  color: #ecf0f1 !important; /* Light Gray */
+}
 
-    /* Additional styles to ensure readability */
-    .container, .content, .hero-body, .footer {
-      color: #ecf0f1 !important;
-    }
+.publication-authors a:hover {
+  color: #e74c3c !important; /* Red */
+}
 
-    .section {
-      background-color: #2c3e50 !important; /* Dark Blue */
-    }
+/* Additional styles to ensure readability */
+.container, .content, .hero-body, .footer {
+  color: #ecf0f1 !important;
+}
+
+.section {
+  background-color: #2c3e50 !important; /* Dark Blue */
+}
+
+.navbar-item .icon {
+  margin-right: 5px;
+}
+
+.navbar-end .navbar-item {
+  display: inline-block; /* Ensure items are inline */
+}
+
+.navbar-end {
+  display: flex;
+  align-items: center;
+}
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
