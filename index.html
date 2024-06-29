@@ -43,6 +43,30 @@
     .hero-body {
       padding-top: 9rem; /* Adjust this value to increase/decrease the space */
     }
+        .video-section {
+      text-align: center;
+      padding: 2rem 0;
+    }
+    .video-section .video-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .video-section .video-subtitle {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+    .video-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .video-container iframe {
+      width: 100%;
+      height: 450px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
   </style>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -170,6 +194,14 @@
   </div>
 </section>
 
+<!-- Video Section -->
+  <section class="video-section">
+    <h1 class="video-title">A Quick Glance into MIRAI</h1>
+    <p class="video-subtitle">(Overview of xxx?)</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
