@@ -1,39 +1,40 @@
 body {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 40px; /* Increase base font size */
+  font-size: 20px; /* Increase base font size */
   line-height: 1.8; /* Adjust line height for readability */
 }
 
 h1, .hero-body {
-  font-size: 2.8rem;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 2.0rem;
+  font-size: 2.25rem;
 }
 
 h4 {
-  font-size: 1.75rem;
+  font-size: 2rem;
 }
 
 h5 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 h6 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
+/* Navigation bar font size */
 .navbar-item {
-  font-size: 1.2rem; /* Increase font size for navigation items */
+  font-size: 1.5rem; /* Increase font size for navigation items */
 }
 
 .navbar-link {
-  font-size: 1.2rem; /* Increase font size for dropdown links */
+  font-size: 1.5rem; /* Increase font size for dropdown links */
 }
 
 /* Footer font size */
@@ -46,7 +47,7 @@ h6 {
 .link-block a {
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 1.5rem; /* Increase font size for links */
+  font-size: 1.2rem; /* Increase font size for links */
 }
 
 .mathvista {
@@ -65,6 +66,7 @@ h6 {
   font-family: 'Google Sans', sans-serif;
 }
 
+/* Publication sections font size */
 .publication-title, .publication-authors {
   font-family: 'Google Sans', sans-serif;
   font-size: 2rem; /* Increase font size */
@@ -96,6 +98,11 @@ h6 {
 .author-block {
   display: inline-block;
   font-size: 1.5rem; /* Increase font size */
+}
+
+/* Captions font size */
+.content.has-text-centered p {
+  font-size: 1.5rem; /* Increase font size for captions */
 }
 
 .publication-video {
@@ -140,7 +147,7 @@ h6 {
 
 @media screen and (max-width: 768px) {
   body {
-    font-size: 22px; /* Adjust base font size for mobile */
+    font-size: 18px; /* Adjust base font size for mobile */
   }
 
   h1, .hero-body {
@@ -165,6 +172,14 @@ h6 {
 
   h6 {
     font-size: 1rem;
+  }
+
+  .navbar-item {
+    font-size: 1.25rem; /* Adjust font size for navigation items on mobile */
+  }
+
+  .navbar-link {
+    font-size: 1.25rem; /* Adjust font size for dropdown links on mobile */
   }
 
   #org-banners {
