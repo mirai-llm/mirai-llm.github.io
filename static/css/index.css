@@ -28,6 +28,11 @@ h6 {
   font-size: 1.5rem;
 }
 
+pre code {
+  font-size: 0.875rem; /* Decrease font size for code blocks */
+  line-height: 1.4; /* Adjust line height for better readability */
+}
+
 .hero-body {
   background-color: #2166ac; /* Change background color */
   color: white; /* Default text color to white for readability */
