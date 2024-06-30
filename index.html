@@ -503,19 +503,14 @@
           <pre><code class="language-python">{api_description}</code></pre>
           <p>You will use an iterative approach, interleaving "Thought", "Action", and "Observation" steps to collect information and perform the forecast. You may perform up to <strong>20</strong> iterations. The steps are as follows:</p>
           <ul>
-            <li><strong>Thought:</strong> Analyze the current information and reason about the current situation, and predicts which API you want to use (try to use different APIs to collect diverse information) or make a decision that you want to make a final answer.</li>
-            <li>
-              <a class="collapse-link" data-bs-toggle="collapse" href="#collapseData" role="button" aria-expanded="false" aria-controls="collapseData"><strong>If gathering more data:</strong><i class="fas fa-caret-down"></i></a>
-              <div class="collapse" id="collapseData">
-                <p>The action must be an executable Python code snippet that starts with <code>```python</code> and ends with <code>```</code>. It can contain multiple lines of codes and function calls using the defined API or Python libraries. You must use <code>print()</code> to output the results, and only the printed output will be returned in the observation step.</p>
-              </div>
+            <li><strong>Thought</strong>: Analyze the current information and reason about the current situation, and predicts which API you want to use (try to use different APIs to collect diverse information) or make a decision that you want to make a final answer.</li>
+            <li><strong>Action</strong>: Use the API to gather more information or provide the final forecast.
+              <ul>
+                <li><strong>If gathering more data</strong>: the action must be an executable Python code snippet that starts with <code>```python</code> and ends with <code>```</code>. It can contain multiple lines of codes and function calls using the defined API or Python libraries. You must use <code>print()</code> to output the results, and only the printed output will be returned in the observation step.</li>
+                <li><strong>If making the final forecast</strong>: the action must start immediately with <code>"Final Answer:"</code>, and follow with the answer in the expected JSON format. This should not be enclosed within triple backticks.</li>
+              </ul>
             </li>
-            <li>
-              <a class="collapse-link" data-bs-toggle="collapse" href="#collapseFinal" role="button" aria-expanded="false" aria-controls="collapseFinal"><strong>If making the final forecast:</strong><i class="fas fa-caret-down"></i></a>
-              <div class="collapse" id="collapseFinal">
-                <p>The action must start immediately with <code>"Final Answer:"</code>, and follow with the answer in the expected JSON format. This should not be enclosed within triple backticks.</p>
-              </div>
-            </li>
+            <li><strong>Observation</strong>: Return the printed output of the executed code snippet.</li>
           </ul>
           <p><strong>Observation:</strong> Return the printed output of the executed code snippet.</p>
           <p>To make a reasonable forecast, you should collect both news and relational evidence to support your prediction. When you are fully confident that you accumulate enough information to make the final forecast, you should start the "Thought" with your reasoning using the news and structural information to make the prediction, and then start the "Action" step with <code>Final Answer:</code> followed by the answer in the expected JSON format. The answer should be a JSON dictionary where the keys are the forecasted two-digit first-level CAMEO codes and the values are lists of forecasted three-digit second-level CAMEO codes that are child relations of the key. For example, <code>Action: Final Answer: {"01": ["010", "011", "012"], "02": ["020", "023"]}</code>.</p>
