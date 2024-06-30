@@ -35,11 +35,17 @@ h6 {
   padding-bottom: 1rem;
 }
 
+.title-icon {
+  width: 60px; /* Adjust size to match the title text */
+  height: 60px; /* Ensure it maintains aspect ratio */
+  margin-right: 1rem; /* Space between the icon and the text */
+}
+
 .publication-title {
-  font-size: 2.5rem;
+  font-size: 4rem;
   margin-bottom: 0.8rem;
   color: white; /* Title color */
-  font-family: 'Montserrat';
+  font-family: 'Roboto';
 }
 
 .publication-authors {
