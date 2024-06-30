@@ -278,8 +278,8 @@ pre code {
 }
 
 .final-status-box {
-  background: #f5f5f5; /* Light gray background */
-  border: 2px solid #616161; /* Dark gray border */
+  background: #e3f2fd; /* Light blue background */
+  border: 2px solid #1976d2; /* Dark blue border */
 }
 
 .forecasting-example .content {
