@@ -252,8 +252,8 @@ h6 {
 } */
 
 .forecasting-example .box {
-  margin-bottom: 2rem;
-  border-radius: 8px;
+  margin-bottom: 2rem; 
+  border-radius: 8px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -295,11 +295,11 @@ h6 {
 
 .forecasting-example .content ul li {
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .forecasting-example .content p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.5;
 }
 
