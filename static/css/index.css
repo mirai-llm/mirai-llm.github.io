@@ -48,8 +48,8 @@ h6 {
 }
 
 .button.is-medium {
-    padding: 12px 24px; /* Padding for the button */
-    font-size: 1.2em; /* Font size */
+    padding: 12px 12px; /* Padding for the button */
+    font-size: 1.0em; /* Font size */
 }
 
 pre code {
