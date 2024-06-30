@@ -567,7 +567,7 @@ for event in events:
     print(event)
 </code></pre>
           <p><strong>Observation:</strong></p>
-          <pre><code class="language-python">Event(date=Date("2023-11-02"), head_entity=ISOCode("AUS"), relation=CAMEOCode("042"), tail_entity=ISOCode("CHN"))
+          <pre><code class="language-json">Event(date=Date("2023-11-02"), head_entity=ISOCode("AUS"), relation=CAMEOCode("042"), tail_entity=ISOCode("CHN"))
 Event(date=Date("2023-11-02"), head_entity=ISOCode("AUS"), relation=CAMEOCode("040"), tail_entity=ISOCode("CHN"))
 Event(date=Date("2023-11-02"), head_entity=ISOCode("AUS"), relation=CAMEOCode("036"), tail_entity=ISOCode("CHN"))
 Event(date=Date("2023-11-01"), head_entity=ISOCode("AUS"), relation=CAMEOCode("042"), tail_entity=ISOCode("CHN"))
@@ -620,7 +620,7 @@ for code, count in cameo_code_counts.items():
     print(f"CAMEO Code: {code}, Count: {count}")
           </code></pre>
           <p><strong>Observation:</strong></p>
-          <pre><code class="language-python">
+          <pre><code class="language-json">
             CAMEO Code: 042, Count: 10
 CAMEO Code: 040, Count: 3
 CAMEO Code: 036, Count: 8
@@ -659,7 +659,7 @@ for relation in relations:
     print(f"CAMEO Code: {relation.cameo_code}, Name: {relation.name}, Description: {relation.description}")
 </code></pre>
 <p><strong>Observation:</strong></p>
-          <pre><code class="language-python">CAMEO Code: 042, Name: Make a visit, Description: Travel to another location for a meeting or other event.
+          <pre><code class="language-json">CAMEO Code: 042, Name: Make a visit, Description: Travel to another location for a meeting or other event.
 CAMEO Code: 036, Name: Express intent to meet or negotiate, Description: Offer, promise, agree to, or otherwise indicate willingness or commitment to meet, visit, or engage in talks or negotiations.
 CAMEO Code: 040, Name: Consult, not specified, Description: All consultations and meetings, not otherwise specified.
 CAMEO Code: 061, Name: Cooperate economically, Description: Initiate, resume, improve, or expand economic exchange or cooperation.
@@ -701,7 +701,7 @@ for article in news_articles:
     print(article)
 </code></pre>
 <p><strong>Observation:</strong></p>
-          <pre><code class="language-python">(Date(date="2023-11-02"), "No quick fix to remaining tariffs ahead of China visit")
+          <pre><code class="language-json">(Date(date="2023-11-02"), "No quick fix to remaining tariffs ahead of China visit")
 (Date(date="2023-11-02"), "China"s aggression in Indo-Pacific leads to "concern and angst": Peter Dutton, Australia"s leader of opposition")
 (Date(date="2023-11-02"), "China not a "trustworthy partner", Taiwan warns PM")
 (Date(date="2023-11-02"), "Australia and China eye new ways to heal old wounds")
