@@ -28,6 +28,25 @@ h6 {
   font-size: 1.4rem;
 }
 
+.button.is-outlined {
+    border: 2px solid #3273dc; /* Border color */
+    color: #3273dc; /* Text color */
+    background-color: transparent; /* Background color */
+    font-weight: bold; /* Text weight */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.button.is-outlined:hover {
+    background-color: #3273dc; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+}
+
+.button.is-medium {
+    padding: 12px 24px; /* Padding for the button */
+    font-size: 1.2em; /* Font size */
+}
+
 pre code {
   font-size: 0.875rem; /* Decrease font size for code blocks */
   line-height: 1.4; /* Adjust line height for better readability */
