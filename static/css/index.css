@@ -277,6 +277,12 @@ pre code {
   border: 2px solid #43a047; /* Green border */
 }
 
+.final-status-box {
+    background: #f3e5f5; /* Light purple background */
+    border: 2px solid #8e24aa; /* Purple border */
+}
+
+
 .forecasting-example .content {
   margin-bottom: 1.5rem;
 }
