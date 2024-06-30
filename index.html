@@ -468,7 +468,7 @@
     <div class="box">
       <div class="content">
         <h3 class="title is-4">
-          <i class="fas fa-info-circle"></i>  Query Details
+          <span class="icon"><i class="fas fa-info-circle"></i></span>  <span>Query Details</span>
         </h3>
         <ul>
           <li><strong>Query Quadruplet:</strong> (2023-11-03, AUS, ?, CHN)</li>
@@ -478,13 +478,13 @@
       </div>
       <div class="content">
         <h3 class="title is-4">
-          <i class="fas fa-question-circle"></i>  Query Prompt
+          <span class="icon"><i class="fas fa-question-circle"></i></span>  <span>Query Prompt</span>
         </h3>
         <p>Please forecast the relations that <strong>Australia</strong> will take towards <strong>China</strong> on <strong>November 03, 2023</strong> based on historical information up to <strong>November 02, 2023</strong>. I.e., forecast the relation CAMEO codes in query event <strong>Event(date=2023-11-03, head_entity=ISOCode(AUS), relation=CAMEOCode(?), tail_entity=ISOCode(CHN))</strong>.</p>
       </div>
       <div class="content">
           <h3 class="title is-4">
-            <i class="fas fa-cogs"></i> System Prompt
+            <span class="icon"><i class="fas fa-cogs"></i></span> <span>System Prompt</span>
           </h3>
           <p>You are an expert in forecasting future events based on historical data. The database contains news articles from January 1, 2023 to the current date <strong>November 02, 2023</strong> and the events extracted from these articles. The events are in the form of (date, subject country, relation, object country), where the countries are represented by ISO 3166-1 alpha-3 codes and the relations are represented by the CAMEO codes defined in the "Conflict and Mediation Event Observations" ontology. The relations are hierarchical: first-level relations are general parent relations represented by two-digit CAMEO codes, while second-level relations are more specific child relations represented by three-digit CAMEO codes. Child relations have the same first two digits as their parent relations. For example, "01" is a first-level relation, and "010" and "011" are some of its second-level relations. The relations in the database are represented in the second-level form.</p>
           <p>Your task is to forecast the future relations between two entities in a given query. You have access to a defined Python API that allows you to query the database for historical events and statistics, and to get precise information about the ISO country codes and CAMEO relation codes. You are also authorized to utilize additional safe, well-established Python libraries such as numpy, pandas, scikit-learn, and NetworkX to enhance your data analysis and forecasting accuracy.</p>
