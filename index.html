@@ -742,6 +742,36 @@ for article in news_articles:
         </div>
       </div>
     </div>
+    <div class="box final-status-box">
+      <div class="content">
+        <h3 class="title is-5">
+          <i class="fas fa-flag-checkered"></i> Agent Final Status
+        </h3>
+        <ul>
+          <li><strong>End State:</strong> Final Answer</li>
+          <li><strong>Number of Steps Taken:</strong> 5</li>
+          <li><strong>Final Answer:</strong></li>
+          <pre><code class="language-json">{
+  "03": ["031", "036"],
+  "04": ["040", "042", "043", "046"],
+  "06": ["061"],
+  "17": ["173"]
+}</code></pre>
+          <p>We show the corresponding relation names of the predicted codes here for a better review:</p>
+          <pre><code class="language-json">{
+  "Express intent to cooperate": ["Express intent to engage in material cooperation", "Express intent to meet or negotiate"],
+  "Consult": ["Consult, not specified", "Make a visit", "Host a visit", "Engage in negotiation"],
+  "Engage in material cooperation": ["Cooperate economically"],
+  "Coerce": ["Arrest or detain"]
+}</code></pre>
+          <p><strong>Ground Truth Answer:</strong></p>
+          <pre><code class="language-json">{
+  "03": ["036"],
+  "04": ["042"],
+  "17": ["173"]
+}</code></pre>
+        </ul>
+      </div>
   </div>
 </section>
   
