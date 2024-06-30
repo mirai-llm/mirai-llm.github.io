@@ -620,7 +620,8 @@ for code, count in cameo_code_counts.items():
     print(f"CAMEO Code: {code}, Count: {count}")
           </code></pre>
           <p><strong>Observation:</strong></p>
-          <pre><code class="language-python">CAMEO Code: 042, Count: 10
+          <pre><code class="language-python">
+            CAMEO Code: 042, Count: 10
 CAMEO Code: 040, Count: 3
 CAMEO Code: 036, Count: 8
 CAMEO Code: 173, Count: 2
@@ -628,6 +629,34 @@ CAMEO Code: 046, Count: 2
 CAMEO Code: 061, Count: 3
 CAMEO Code: 031, Count: 1
 CAMEO Code: 043, Count: 1
+</code></pre>
+        </div>
+        <div class="content">
+          <h3 class="title is-5">
+            <i class="fas fa-retweet"></i> Agent ReAct Process 3
+          </h3>
+          <p><strong>Thought:</strong> The distribution of CAMEO codes from the historical events between Australia and China reveals that certain types of interactions are more frequent than others. Specifically, the most common relations are:</p>
+          <ul>
+            <li><strong>042</strong>: 10 occurrences</li>
+            <li><strong>036</strong>: 8 occurrences</li>
+            <li><strong>040</strong>: 3 occurrences</li>
+            <li><strong>061</strong>: 3 occurrences</li>
+            <li><strong>046</strong>: 2 occurrences</li>
+            <li><strong>173</strong>: 2 occurrences</li>
+            <li><strong>031</strong>: 1 occurrence</li>
+            <li><strong>043</strong>: 1 occurrence</li>
+          </ul>
+          <p>To make a more informed forecast, we should understand what these CAMEO codes represent. We will map these codes to their descriptions to gain insights into the nature of these interactions.</p>
+          <p><strong>Action:</strong></p>
+          <pre><code class="language-python"># Define the CAMEO codes to map
+cameo_codes_to_map = ["042", "036", "040", "061", "046", "173", "031", "043"]
+
+# Map the CAMEO codes to their descriptions
+relations = [map_cameo_to_relation(CAMEOCode(code)) for code in cameo_codes_to_map]
+
+# Print the descriptions of the CAMEO codes
+for relation in relations:
+    print(f"CAMEO Code: {relation.cameo_code}, Name: {relation.name}, Description: {relation.description}")
 </code></pre>
         </div>
       </div>
