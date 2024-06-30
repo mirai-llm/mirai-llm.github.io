@@ -38,7 +38,7 @@ h6 {
     color: #3273dc; /* Text color */
     background-color: transparent; /* Background color */
     font-weight: bold; /* Text weight */
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 6px; /* Rounded corners */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
@@ -48,8 +48,8 @@ h6 {
 }
 
 .button.is-medium {
-    padding: 12px 12px; /* Padding for the button */
-    font-size: 1.0em; /* Font size */
+    padding: 8px 8px; /* Padding for the button */
+    font-size: 0.9em; /* Font size */
 }
 
 pre code {
