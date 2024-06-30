@@ -36,8 +36,8 @@ h6 {
 }
 
 .title-icon {
-  width: 60px; /* Adjust size to match the title text */
-  height: 60px; /* Ensure it maintains aspect ratio */
+  width: 80px; /* Adjust size to match the title text */
+  height: 80px; /* Ensure it maintains aspect ratio */
   margin-right: 1rem; /* Space between the icon and the text */
 }
 
