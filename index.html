@@ -504,7 +504,18 @@
           <p>To make a reasonable forecast, you should collect both news and relational evidence to support your prediction. When you are fully confident that you accumulate enough information to make the final forecast, you should start the "Thought" with your reasoning using the news and structural information to make the prediction, and then start the "Action" step with <code>Final Answer:</code> followed by the answer in the expected JSON format. The answer should be a JSON dictionary where the keys are the forecasted two-digit first-level CAMEO codes and the values are lists of forecasted three-digit second-level CAMEO codes that are child relations of the key. For example, <code>Action: Final Answer: {"01": ["010", "011", "012"], "02": ["020", "023"]}</code>.</p>
           <p>The final answer will be evaluated based on the precision and recall of the forecasted first-level and second-level relations, so only include confident first-level and second-level CAMEO codes in your final forecast.</p>
           <p>Try to use different APIs and Python libraries to collect diverse information (including multi-hop relations), such as the precise meaning of CAMEO codes, insights from news content, relational data, and statistical analyses to support your forecasts. Consider not only the frequency of the relations but also the temporal aspects of the data when making your forecast.</p>
-        </div>
+          <h3 class="title is-4">
+            <i class="fas fa-retweet"></i> Agent ReAct Process
+          </h3>
+          <p><strong>Thought:</strong> To forecast the relations that Australia will take towards China on November 03, 2023, we need to gather historical data on the interactions between these two countries. This includes examining the frequency and types of relations observed in the past, as well as any recent trends or significant events that might influence future relations.</p>
+          <p>We will proceed with the following steps:</p>
+          <ul>
+            <li><strong>(a) Retrieve Historical Events:</strong> Gather events involving Australia (AUS) and China (CHN) to understand the context and types of relations that have occurred in the past.</li>
+            <li><strong>(b) Analyze Relation Distribution:</strong> Analyze the distribution of different CAMEO codes in these events to identify the most common types of interactions.</li>
+            <li><strong>(c) Examine Recent Trends:</strong> Focus on recent events to detect any emerging trends or shifts in relations.</li>
+            <li><strong>(d) Contextual Analysis:</strong> Review news articles to gain insights into the context and underlying reasons for these relations.</li>
+          </ul>  
+      </div>
     </div>
   </div>
 </section>
