@@ -536,7 +536,7 @@
         <!-- Scrollable Content 1 -->
         <div class="content">
           <h3 class="title is-5">
-            <i class="fas fa-retweet"></i> Agent ReAct Process
+            <i class="fas fa-retweet"></i> Agent ReAct Process 1
           </h3>
           <p><strong>Thought:</strong> To forecast the relations that Australia will take towards China on November 03, 2023, we need to gather historical data on the interactions between these two countries. This includes examining the frequency and types of relations observed in the past, as well as any recent trends or significant events that might influence future relations.</p>
           <p>We will proceed with the following steps:</p>
@@ -604,8 +604,21 @@ Event(date=Date("2023-10-21"), head_entity=ISOCode("AUS"), relation=CAMEOCode("0
           <h3 class="title is-5">
             <i class="fas fa-retweet"></i> Agent ReAct Process 2
           </h3>
-          <p><strong>Thought:</strong> Another example of Agent ReAct Process...</p>
-          <!-- Add more content here for the second process -->
+          <p><strong>Thought:</strong> The retrieved events indicate a variety of relations between Australia and China. To forecast the future relations, we need to analyze the distribution of these relations to identify the most common types and any recent trends.</p>
+          <p>Next, we will analyze the distribution of the different CAMEO codes in these events to identify the most frequent interactions. This will help us understand the dominant types of relations and any emerging patterns.</p>
+          <p><strong>Action:</strong></p>
+          <pre><code class="language-python">from collections import Counter
+
+# Extract the CAMEO codes from the retrieved events
+cameo_codes = [event.relation.code for event in events]
+
+# Count the frequency of each CAMEO code
+cameo_code_counts = Counter(cameo_codes)
+
+# Print the distribution of CAMEO codes
+for code, count in cameo_code_counts.items():
+    print(f"CAMEO Code: {code}, Count: {count}")
+          </code></pre>
         </div>
       </div>
     </div>
