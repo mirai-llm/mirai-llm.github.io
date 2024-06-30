@@ -28,6 +28,11 @@ h6 {
   font-size: 1.4rem;
 }
 
+.highlight {
+    color: #3273dc; /* Change to your preferred color */
+    font-weight: bold;
+}
+
 .button.is-outlined {
     border: 2px solid #3273dc; /* Border color */
     color: #3273dc; /* Text color */
