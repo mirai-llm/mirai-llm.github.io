@@ -548,8 +548,11 @@
             </li>
           </ul>
           <p>Let's start by retrieving historical events between Australia and China.</p>
-          <p><strong>Action:</strong></p>
-          <pre><code class="language-python">from datetime import datetime
+          <p>
+            <a class="collapse-link" data-bs-toggle="collapse" href="#collapseAction" role="button" aria-expanded="false" aria-controls="collapseAction"><strong>Action:</strong><i class="fas fa-caret-down"></i></a>
+          </p>
+          <div class="collapse" id="collapseAction">
+            <pre><code class="language-python">from datetime import datetime
 
 # Define the date range for the historical data collection
 start_date = Date("2023-01-01")
