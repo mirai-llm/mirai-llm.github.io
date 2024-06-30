@@ -83,6 +83,13 @@
       width: 20px;
       height: 20px;
     }
+    .scroll-container {
+      max-height: 600px; /* Adjust height as needed */
+      overflow-y: auto;
+    }
+    .box {
+      margin-bottom: 20px;
+    }
   </style>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -525,6 +532,8 @@
       </div>
 
       <div class="box react-process-box">
+      <div class="scroll-container">
+        <!-- Scrollable Content 1 -->
         <div class="content">
           <h3 class="title is-5">
             <i class="fas fa-retweet"></i> Agent ReAct Process
@@ -557,8 +566,8 @@ events = get_events(date_range=date_range, head_entities=[aus_code], tail_entiti
 for event in events:
     print(event)
 </code></pre>
-      <p><strong>Observation:</strong></p>
-      <pre><code class="language-python">Event(date=Date("2023-11-02"), head_entity=ISOCode("AUS"), relation=CAMEOCode("042"), tail_entity=ISOCode("CHN"))
+          <p><strong>Observation:</strong></p>
+          <pre><code class="language-python">Event(date=Date("2023-11-02"), head_entity=ISOCode("AUS"), relation=CAMEOCode("042"), tail_entity=ISOCode("CHN"))
 Event(date=Date("2023-11-02"), head_entity=ISOCode("AUS"), relation=CAMEOCode("040"), tail_entity=ISOCode("CHN"))
 Event(date=Date("2023-11-02"), head_entity=ISOCode("AUS"), relation=CAMEOCode("036"), tail_entity=ISOCode("CHN"))
 Event(date=Date("2023-11-01"), head_entity=ISOCode("AUS"), relation=CAMEOCode("042"), tail_entity=ISOCode("CHN"))
@@ -589,10 +598,20 @@ Event(date=Date("2023-10-22"), head_entity=ISOCode("AUS"), relation=CAMEOCode("0
 Event(date=Date("2023-10-21"), head_entity=ISOCode("AUS"), relation=CAMEOCode("042"), tail_entity=ISOCode("CHN"))
 Event(date=Date("2023-10-21"), head_entity=ISOCode("AUS"), relation=CAMEOCode("040"), tail_entity=ISOCode("CHN"))
 </code></pre>
+        </div>
+        <!-- Add more content here for additional Agent ReAct Processes -->
+        <div class="content">
+          <h3 class="title is-5">
+            <i class="fas fa-retweet"></i> Agent ReAct Process 2
+          </h3>
+          <p><strong>Thought:</strong> Another example of Agent ReAct Process...</p>
+          <!-- Add more content here for the second process -->
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
+  
 <section>
   <div class="section" id="org-banners" style="display:flex">
     <a href="https://www.ucla.edu/" target="_blank" rel="external">
@@ -612,7 +631,7 @@ Event(date=Date("2023-10-21"), head_entity=ISOCode("AUS"), relation=CAMEOCode("0
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license"
+            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
