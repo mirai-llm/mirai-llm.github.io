@@ -1,7 +1,7 @@
 body {
   font-family: 'Noto Sans', sans-serif;
   font-size: 20px; /* Increase base font size */
-  line-height: 1.8; /* Adjust line height for readability */
+  line-height: 1.5; /* Adjust line height for readability */
 }
 
 h1, .hero-body {
@@ -25,7 +25,7 @@ h5 {
 }
 
 h6 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 pre code {
@@ -36,8 +36,8 @@ pre code {
 .hero-body {
   background-color: #2166ac; /* Change background color */
   color: white; /* Default text color to white for readability */
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
 }
 
 .title-icon {
@@ -71,7 +71,7 @@ pre code {
   display: inline-block;
   margin-right: 0.3rem;
   margin-bottom: 0.3rem;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
 }
 
 .author-link {
@@ -80,7 +80,7 @@ pre code {
 }
 
 .publication-affiliations {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   color: white; /* Affiliations color */
 }
 
@@ -110,11 +110,11 @@ pre code {
 }
 
 .navbar-item {
-  font-size: 1.2rem; /* Increase font size for navigation items */
+  font-size: 1.1rem; /* Increase font size for navigation items */
 }
 
 .navbar-link {
-  font-size: 1.2rem; /* Increase font size for dropdown links */
+  font-size: 1.1rem; /* Increase font size for dropdown links */
 }
 
 .navbar-brand, .navbar-end {
@@ -125,7 +125,7 @@ pre code {
 
 /* Footer font size */
 .footer .icon-link {
-  font-size: 30px;
+  font-size: 28px;
   color: #000;
 }
 
@@ -133,13 +133,13 @@ pre code {
 .link-block a {
   margin-top: 8px;
   margin-bottom: 8px;
-  font-size: 1.2rem; /* Increase font size for links */
+  font-size: 1.0rem; /* Increase font size for links */
 }
 
 .teaser .hero-body {
   padding-top: 1rem;
-  padding-bottom: 2rem;
-  font-size: 1.5rem; /* Increase font size */
+  padding-bottom: 1rem;
+  font-size: 1.3rem; /* Increase font size */
 }
 
 .teaser {
@@ -150,21 +150,21 @@ pre code {
 
 .publication-authors {
   font-family: 'Google Sans', sans-serif;
-  font-size: 2.5rem; /* Increase font size */
+  font-size: 2.2rem; /* Increase font size */
 }
 
 .publication-venue {
   color: #555;
   width: fit-content;
   font-weight: bold;
-  font-size: 1.5rem; /* Increase font size */
+  font-size: 1.3rem; /* Increase font size */
 }
 
 .publication-awards {
   color: #ff3860;
   width: fit-content;
   font-weight: bolder;
-  font-size: 1.5rem; /* Increase font size */
+  font-size: 1.3rem; /* Increase font size */
 }
 
 .publication-title {
@@ -175,9 +175,9 @@ pre code {
     }
 
 .publication-subtitle {
-  font-size: 1.8rem; /* Smaller font size for the subtitle */
+  font-size: 1.6rem; /* Smaller font size for the subtitle */
   margin-top: 0.5rem; /* Adjust margin to bring the subtitle closer to the title */
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
   font-weight: bold;
   color: white !important; /* Subtitle color */
 }
@@ -188,12 +188,12 @@ pre code {
 
 .author-block {
   display: inline-block;
-  font-size: 1.5rem; /* Increase font size */
+  font-size: 1.3rem; /* Increase font size */
 }
 
 /* Captions font size */
 .content.has-text-centered p {
-  font-size: 1.2rem; /* Increase font size for captions */
+  font-size: 1.1rem; /* Increase font size for captions */
 }
 
 .publication-video {
@@ -238,12 +238,12 @@ pre code {
 
 .forecasting-example {
   background-color: #f0f8ff; /* Light background color for the section */
-  padding: 2rem 0;
+  padding: 1.5rem 0;
 }
 
 .forecasting-example .title {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-family: 'Montserrat', sans-serif;
   color: #2166ac; /* Title color */
 }
@@ -257,7 +257,7 @@ pre code {
 } */
 
 .forecasting-example .box {
-  margin-bottom: 2rem; 
+  margin-bottom: 1.5rem; 
   border-radius: 8px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -283,7 +283,7 @@ pre code {
 }
 
 .forecasting-example .content {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .forecasting-example .content h3 {
@@ -337,36 +337,36 @@ pre code {
   }
 
   h1, .hero-body {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   h3 {
-    font-size: 1.75rem;
+    font-size: 1.55rem;
   }
 
   h4 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   h5 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 
   h6 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .navbar-item {
-    font-size: 1.0rem; /* Adjust font size for navigation items on mobile */
+    font-size: 0.9rem; /* Adjust font size for navigation items on mobile */
     padding: 0.6rem 0.6rem; /* Adjust padding */
   }
 
   .navbar-link {
-    font-size: 1.0rem; /* Adjust font size for dropdown links on mobile */
+    font-size: 0.9rem; /* Adjust font size for dropdown links on mobile */
   }
 
   .navbar-brand, .navbar-end {
