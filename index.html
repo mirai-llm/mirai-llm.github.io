@@ -530,36 +530,14 @@
           <p><strong>Thought:</strong> To forecast the relations that Australia will take towards China on November 03, 2023, we need to gather historical data on the interactions between these two countries. This includes examining the frequency and types of relations observed in the past, as well as any recent trends or significant events that might influence future relations.</p>
           <p>We will proceed with the following steps:</p>
           <ul>
-            <li>
-              <a class="collapse-link" data-bs-toggle="collapse" href="#collapseHist" role="button" aria-expanded="false" aria-controls="collapseHist"><strong>(a) Retrieve Historical Events:</strong><i class="fas fa-caret-down"></i></a>
-              <div class="collapse" id="collapseHist">
-                <p>Gather events involving Australia (AUS) and China (CHN) to understand the context and types of relations that have occurred in the past.</p>
-              </div>
-            </li>
-            <li>
-              <a class="collapse-link" data-bs-toggle="collapse" href="#collapseRel" role="button" aria-expanded="false" aria-controls="collapseRel"><strong>(b) Analyze Relation Distribution:</strong><i class="fas fa-caret-down"></i></a>
-              <div class="collapse" id="collapseRel">
-                <p>Analyze the distribution of different CAMEO codes in these events to identify the most common types of interactions.</p>
-              </div>
-            </li>
-            <li>
-              <a class="collapse-link" data-bs-toggle="collapse" href="#collapseTrends" role="button" aria-expanded="false" aria-controls="collapseTrends"><strong>(c) Examine Recent Trends:</strong><i class="fas fa-caret-down"></i></a>
-              <div class="collapse" id="collapseTrends">
-                <p>Focus on recent events to detect any emerging trends or shifts in relations.</p>
-              </div>
-            </li>
-            <li>
-              <a class="collapse-link" data-bs-toggle="collapse" href="#collapseContext" role="button" aria-expanded="false" aria-controls="collapseContext"><strong>(d) Contextual Analysis:</strong><i class="fas fa-caret-down"></i></a>
-              <div class="collapse" id="collapseContext">
-                <p>Review news articles to gain insights into the context and underlying reasons for these relations.</p>
-              </div>
-            </li>
+            <li data-bs-toggle="tooltip" title="Gather events involving Australia (AUS) and China (CHN) to understand the context and types of relations that have occurred in the past."><strong>(a) Retrieve Historical Events:</strong></li>
+            <li data-bs-toggle="tooltip" title="Analyze the distribution of different CAMEO codes in these events to identify the most common types of interactions."><strong>(b) Analyze Relation Distribution:</strong></li>
+            <li data-bs-toggle="tooltip" title="Focus on recent events to detect any emerging trends or shifts in relations."><strong>(c) Examine Recent Trends:</strong></li>
+            <li data-bs-toggle="tooltip" title="Review news articles to gain insights into the context and underlying reasons for these relations."><strong>(d) Contextual Analysis:</strong></li>
           </ul>
-          <p>
-            <a class="collapse-link" data-bs-toggle="collapse" href="#collapseAction" role="button" aria-expanded="false" aria-controls="collapseAction"><strong>Action:</strong><i class="fas fa-caret-down"></i></a>
-          </p>
-          <div class="collapse" id="collapseAction">
-            <pre><code class="language-python">from datetime import datetime
+          <p>Let's start by retrieving historical events between Australia and China.</p>
+          <p><strong>Action:</strong></p>
+          <pre><code class="language-python">from datetime import datetime
 
 # Define the date range for the historical data collection
 start_date = Date("2023-01-01")
