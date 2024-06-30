@@ -292,18 +292,12 @@ h6 {
   padding: 0 1rem;
 }
 
-.tooltip-text {
-      display: none;
+.collapse {
+      margin-top: 0.5rem;
     }
 
-.tooltip-target:hover + .tooltip-text {
-      display: inline;
-      position: absolute;
-      background: #fff;
-      border: 1px solid #ccc;
-      padding: 5px;
-      border-radius: 4px;
-      z-index: 1000;
+.collapse li {
+      margin-bottom: 0;
     }
 
 @media screen and (max-width: 768px) {
