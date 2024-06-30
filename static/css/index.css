@@ -232,7 +232,7 @@ h6 {
 }
 
 .forecasting-example {
-  background-color: #f9f9f9; /* Light background for contrast */
+  background-color: #f0f8ff; /* Light background color for the section */
   padding: 2rem 0;
 }
 
@@ -240,13 +240,15 @@ h6 {
   text-align: center;
   margin-bottom: 2rem;
   font-family: 'Montserrat', sans-serif;
+  color: #2166ac; /* Title color */
 }
 
 .forecasting-example .box {
   background: white;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid #2166ac; /* Visible border color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .forecasting-example .content {
@@ -257,6 +259,12 @@ h6 {
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 1rem;
   color: #2166ac; /* Use a color that matches your theme */
+  display: flex;
+  align-items: center;
+}
+
+.forecasting-example .content h3 i {
+  margin-right: 0.5rem; /* Space between icon and text */
 }
 
 .forecasting-example .content ul {
