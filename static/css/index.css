@@ -105,11 +105,11 @@ h6 {
 }
 
 .navbar-item {
-  font-size: 1.5rem; /* Increase font size for navigation items */
+  font-size: 1.2rem; /* Increase font size for navigation items */
 }
 
 .navbar-link {
-  font-size: 1.5rem; /* Increase font size for dropdown links */
+  font-size: 1.2rem; /* Increase font size for dropdown links */
 }
 
 .navbar-brand, .navbar-end {
