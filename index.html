@@ -465,26 +465,26 @@
 
 <!-- Example -->
 <section class="forecasting-example" id="example">
-  <div class="container">
-    <h2 class="title is-3">Forecasting Example</h2>
-    <div class="box">
-      <div class="content">
-        <h3 class="title is-4">
-          <span class="icon"><i class="fas fa-info-circle"></i></span>  <span>Query Details</span>
-        </h3>
-        <ul>
-          <li><strong>Query Quadruplet:</strong> (2023-11-03, AUS, ?, CHN)</li>
-          <li><strong>Temporal Distance:</strong> 1; therefore, the current date is 2023-11-02</li>
-          <li><strong>Agent Max Steps:</strong> 20</li>
-        </ul>
-      </div>
-      <div class="content">
-        <h3 class="title is-4">
-          <span class="icon"><i class="fas fa-question-circle"></i></span>  <span>Query Prompt</span>
-        </h3>
-        <p>Please forecast the relations that <strong>Australia</strong> will take towards <strong>China</strong> on <strong>November 03, 2023</strong> based on historical information up to <strong>November 02, 2023</strong>. I.e., forecast the relation CAMEO codes in query event <strong>Event(date=2023-11-03, head_entity=ISOCode(AUS), relation=CAMEOCode(?), tail_entity=ISOCode(CHN))</strong>.</p>
-      </div>
-              <div class="content">
+    <div class="container">
+      <h2 class="title is-3">Forecasting Example</h2>
+      <div class="box">
+        <div class="content">
+          <h3 class="title is-4">
+            <i class="fas fa-info-circle"></i> Query Details
+          </h3>
+          <ul>
+            <li><strong>Query Quadruplet:</strong> (2023-11-03, AUS, ?, CHN)</li>
+            <li><strong>Temporal Distance:</strong> 1; therefore, the current date is 2023-11-02</li>
+            <li><strong>Agent Max Steps:</strong> 20</li>
+          </ul>
+        </div>
+        <div class="content">
+          <h3 class="title is-4">
+            <i class="fas fa-question-circle"></i> Query Prompt
+          </h3>
+          <p>Please forecast the relations that <strong>Australia</strong> will take towards <strong>China</strong> on <strong>November 03, 2023</strong> based on historical information up to <strong>November 02, 2023</strong>. I.e., forecast the relation CAMEO codes in query event <strong>Event(date=2023-11-03, head_entity=ISOCode(AUS), relation=CAMEOCode(?), tail_entity=ISOCode(CHN))</strong>.</p>
+        </div>
+        <div class="content">
           <h3 class="title is-4">
             <i class="fas fa-cogs"></i> System Prompt
           </h3>
@@ -499,12 +499,16 @@
               <strong>Action:</strong> Use the API to gather more information or provide the final forecast.
               <ul>
                 <li>
-                  <span class="tooltip-target"><strong>If gathering more data:</strong></span>
-                  <span class="tooltip-text">The action must be an executable Python code snippet that starts with <code>```python</code> and ends with <code>```</code>. It can contain multiple lines of codes and function calls using the defined API or Python libraries. You must use <code>print()</code> to output the results, and only the printed output will be returned in the observation step.</span>
+                  <a class="btn btn-link" data-bs-toggle="collapse" href="#collapseData" role="button" aria-expanded="false" aria-controls="collapseData"><strong>If gathering more data:</strong></a>
+                  <div class="collapse" id="collapseData">
+                    <p>The action must be an executable Python code snippet that starts with <code>```python</code> and ends with <code>```</code>. It can contain multiple lines of codes and function calls using the defined API or Python libraries. You must use <code>print()</code> to output the results, and only the printed output will be returned in the observation step.</p>
+                  </div>
                 </li>
                 <li>
-                  <span class="tooltip-target"><strong>If making the final forecast:</strong></span>
-                  <span class="tooltip-text">The action must start immediately with <code>"Final Answer:"</code>, and follow with the answer in the expected JSON format. This should not be enclosed within triple backticks.</span>
+                  <a class="btn btn-link" data-bs-toggle="collapse" href="#collapseFinal" role="button" aria-expanded="false" aria-controls="collapseFinal"><strong>If making the final forecast:</strong></a>
+                  <div class="collapse" id="collapseFinal">
+                    <p>The action must start immediately with <code>"Final Answer:"</code>, and follow with the answer in the expected JSON format. This should not be enclosed within triple backticks.</p>
+                  </div>
                 </li>
               </ul>
             </li>
@@ -519,10 +523,30 @@
           <p><strong>Thought:</strong> To forecast the relations that Australia will take towards China on November 03, 2023, we need to gather historical data on the interactions between these two countries. This includes examining the frequency and types of relations observed in the past, as well as any recent trends or significant events that might influence future relations.</p>
           <p>We will proceed with the following steps:</p>
           <ul>
-            <li data-bs-toggle="tooltip" title="Gather events involving Australia (AUS) and China (CHN) to understand the context and types of relations that have occurred in the past."><strong>(a) Retrieve Historical Events:</strong></li>
-            <li data-bs-toggle="tooltip" title="Analyze the distribution of different CAMEO codes in these events to identify the most common types of interactions."><strong>(b) Analyze Relation Distribution:</strong></li>
-            <li data-bs-toggle="tooltip" title="Focus on recent events to detect any emerging trends or shifts in relations."><strong>(c) Examine Recent Trends:</strong></li>
-            <li data-bs-toggle="tooltip" title="Review news articles to gain insights into the context and underlying reasons for these relations."><strong>(d) Contextual Analysis:</strong></li>
+            <li>
+              <a class="btn btn-link" data-bs-toggle="collapse" href="#collapseHist" role="button" aria-expanded="false" aria-controls="collapseHist"><strong>(a) Retrieve Historical Events:</strong></a>
+              <div class="collapse" id="collapseHist">
+                <p>Gather events involving Australia (AUS) and China (CHN) to understand the context and types of relations that have occurred in the past.</p>
+              </div>
+            </li>
+            <li>
+              <a class="btn btn-link" data-bs-toggle="collapse" href="#collapseRel" role="button" aria-expanded="false" aria-controls="collapseRel"><strong>(b) Analyze Relation Distribution:</strong></a>
+              <div class="collapse" id="collapseRel">
+                <p>Analyze the distribution of different CAMEO codes in these events to identify the most common types of interactions.</p>
+              </div>
+            </li>
+            <li>
+              <a class="btn btn-link" data-bs-toggle="collapse" href="#collapseTrends" role="button" aria-expanded="false" aria-controls="collapseTrends"><strong>(c) Examine Recent Trends:</strong></a>
+              <div class="collapse" id="collapseTrends">
+                <p>Focus on recent events to detect any emerging trends or shifts in relations.</p>
+              </div>
+            </li>
+            <li>
+              <a class="btn btn-link" data-bs-toggle="collapse" href="#collapseContext" role="button" aria-expanded="false" aria-controls="collapseContext"><strong>(d) Contextual Analysis:</strong></a>
+              <div class="collapse" id="collapseContext">
+                <p>Review news articles to gain insights into the context and underlying reasons for these relations.</p>
+              </div>
+            </li>
           </ul>
           <p>Let's start by retrieving historical events between Australia and China.</p>
           <p><strong>Action:</strong></p>
@@ -606,11 +630,6 @@ for event in events:
   <script>hljs.highlightAll();</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js"></script>
-  <script>
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-  </script>
+
 </body>
 </html>
