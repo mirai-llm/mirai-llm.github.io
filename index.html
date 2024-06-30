@@ -79,18 +79,41 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+    .custom-icon {
+      width: 20px;
+      height: 20px;
+    }
     .carousel {
-      width: 100%;
-      overflow: hidden;
       position: relative;
     }
     .carousel-inner {
       display: flex;
-      transition: transform 0.5s ease;
+      overflow: hidden;
     }
     .carousel-item {
-      min-width: 100%;
-      box-sizing: border-box;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      cursor: pointer;
+    }
+    .carousel-control-prev {
+      left: 10px;
+    }
+    .carousel-control-next {
+      right: 10px;
     }
   </style>
   
@@ -534,21 +557,25 @@
       </div>
 
       <div class="box react-process-box">
-        <div class="content">
-          <h3 class="title is-5">
-            <i class="fas fa-retweet"></i> Agent ReAct Process
-          </h3>
-          <p><strong>Thought:</strong> To forecast the relations that Australia will take towards China on November 03, 2023, we need to gather historical data on the interactions between these two countries. This includes examining the frequency and types of relations observed in the past, as well as any recent trends or significant events that might influence future relations.</p>
-          <p>We will proceed with the following steps:</p>
-          <ul>
-            <li><strong>(a) Retrieve Historical Events:</strong> Gather events involving Australia (AUS) and China (CHN) to understand the context and types of relations that have occurred in the past.</li>
-            <li><strong>(b) Analyze Relation Distribution:</strong> Analyze the distribution of different CAMEO codes in these events to identify the most common types of interactions.</li>
-            <li><strong>(c) Examine Recent Trends:</strong> Focus on recent events to detect any emerging trends or shifts in relations.</li>
-            <li><strong>(d) Contextual Analysis:</strong> Review news articles to gain insights into the context and underlying reasons for these relations.</li>
-          </ul>
-          <p>Let's start by retrieving historical events between Australia and China.</p>
-          <p><strong>Action:</strong></p>
-          <pre><code class="language-python">from datetime import datetime
+      <div id="agent-react-carousel" class="carousel">
+        <div class="carousel-inner">
+          <!-- Carousel Item 1 -->
+          <div class="carousel-item">
+            <div class="content">
+              <h3 class="title is-5">
+                <i class="fas fa-retweet"></i> Agent ReAct Process
+              </h3>
+              <p><strong>Thought:</strong> To forecast the relations that Australia will take towards China on November 03, 2023, we need to gather historical data on the interactions between these two countries. This includes examining the frequency and types of relations observed in the past, as well as any recent trends or significant events that might influence future relations.</p>
+              <p>We will proceed with the following steps:</p>
+              <ul>
+                <li><strong>(a) Retrieve Historical Events:</strong> Gather events involving Australia (AUS) and China (CHN) to understand the context and types of relations that have occurred in the past.</li>
+                <li><strong>(b) Analyze Relation Distribution:</strong> Analyze the distribution of different CAMEO codes in these events to identify the most common types of interactions.</li>
+                <li><strong>(c) Examine Recent Trends:</strong> Focus on recent events to detect any emerging trends or shifts in relations.</li>
+                <li><strong>(d) Contextual Analysis:</strong> Review news articles to gain insights into the context and underlying reasons for these relations.</li>
+              </ul>
+              <p>Let's start by retrieving historical events between Australia and China.</p>
+              <p><strong>Action:</strong></p>
+              <pre><code class="language-python">from datetime import datetime
 
 # Define the date range for the historical data collection
 start_date = Date("2023-01-01")
@@ -566,8 +593,8 @@ events = get_events(date_range=date_range, head_entities=[aus_code], tail_entiti
 for event in events:
     print(event)
 </code></pre>
-      <p><strong>Observation:</strong></p>
-      <pre><code class="language-python">Event(date=Date("2023-11-02"), head_entity=ISOCode("AUS"), relation=CAMEOCode("042"), tail_entity=ISOCode("CHN"))
+              <p><strong>Observation:</strong></p>
+              <pre><code class="language-python">Event(date=Date("2023-11-02"), head_entity=ISOCode("AUS"), relation=CAMEOCode("042"), tail_entity=ISOCode("CHN"))
 Event(date=Date("2023-11-02"), head_entity=ISOCode("AUS"), relation=CAMEOCode("040"), tail_entity=ISOCode("CHN"))
 Event(date=Date("2023-11-02"), head_entity=ISOCode("AUS"), relation=CAMEOCode("036"), tail_entity=ISOCode("CHN"))
 Event(date=Date("2023-11-01"), head_entity=ISOCode("AUS"), relation=CAMEOCode("042"), tail_entity=ISOCode("CHN"))
@@ -598,6 +625,28 @@ Event(date=Date("2023-10-22"), head_entity=ISOCode("AUS"), relation=CAMEOCode("0
 Event(date=Date("2023-10-21"), head_entity=ISOCode("AUS"), relation=CAMEOCode("042"), tail_entity=ISOCode("CHN"))
 Event(date=Date("2023-10-21"), head_entity=ISOCode("AUS"), relation=CAMEOCode("040"), tail_entity=ISOCode("CHN"))
 </code></pre>
+            </div>
+          </div>
+          <!-- Add more carousel items here for additional Agent ReAct Processes -->
+          <div class="carousel-item">
+            <div class="content">
+              <h3 class="title is-5">
+                <i class="fas fa-retweet"></i> Agent ReAct Process 2
+              </h3>
+              <p><strong>Thought:</strong> Another example of Agent ReAct Process...</p>
+              <!-- Add more content here for the second process -->
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" role="button">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" role="button">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
