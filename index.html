@@ -84,7 +84,7 @@
       height: 20px;
     }
     .scroll-container {
-      max-height: 600px; /* Adjust height as needed */
+      max-height: 800px; /* Adjust height as needed */
       overflow-y: auto;
     }
     .box {
@@ -701,19 +701,14 @@ for article in news_articles:
 </code></pre>
 <p><strong>Observation:</strong></p>
           <pre><code class="language-json">(Date(date="2023-11-02"), "No quick fix to remaining tariffs ahead of China visit")
-(Date(date="2023-11-02"), "China"s aggression in Indo-Pacific leads to "concern and angst": Peter Dutton, Australia"s leader of opposition")
-(Date(date="2023-11-02"), "China not a "trustworthy partner", Taiwan warns PM")
+(Date(date="2023-11-02"), "China's aggression in Indo-Pacific leads to 'concern and angst': Peter Dutton, Australia's leader of opposition")
 (Date(date="2023-11-02"), "Australia and China eye new ways to heal old wounds")
 (Date(date="2023-11-02"), "Albanese must aim beyond bilateral outcomes on Beijing visit")
-(Date(date="2023-11-02"), "Anthony Albanese must show Xi Jinping he is "intelligent", "personable" to build on Australia"s recent diplomatic successes with China")
 (Date(date="2023-11-02"), "Western Australian Premier Announces Visit to China")
-(Date(date="2023-11-02"), "Australian PM"s China visit will help normalize relations, says ex-trade minister")
-(Date(date="2023-11-02"), "Albanese to raise human rights and trade with Xi in first China visit by Australian PM since 2016")
+(Date(date="2023-11-02"), "Australian PM's China visit will help normalize relations, says ex-trade minister")
 (Date(date="2023-11-02"), "Nicholas Moore on how to get in early on the next big growth story")
-(Date(date="2023-11-02"), "PM"s China trip cements new era for ties")
-(Date(date="2023-11-02"), "Albanese"s visit to China offers propaganda for Xi Jinping as Beijing seeks to mend western ties")
+(Date(date="2023-11-02"), "PM's China trip cements new era for ties")
 (Date(date="2023-11-02"), "PM to take a hard line on trade with China")
-(Date(date="2023-11-01"), "China"s top military official vows "absolutely no mercy" for Taiwan independence movement, warns against US interference")
 (Date(date="2023-11-01"), "Australian Prime Minister Anthony Albanese to raise imprisoned democracy blogger during China visit")
 </code></pre>
         </div>
@@ -745,6 +740,35 @@ for article in news_articles:
 }
 </code></pre>
         </div>
+<div class="box final-status-box">
+      <div class="content">
+        <h3 class="title is-5">
+          <i class="fas fa-flag-checkered"></i> Agent Final Status
+        </h3>
+        <ul>
+          <li><strong>End State:</strong> Final Answer</li>
+          <li><strong>Number of Steps Taken:</strong> 5</li>
+          <li><strong>Final Answer:</strong></li>
+          <pre><code class="language-json">{
+  "03": ["031", "036"],
+  "04": ["040", "042", "043", "046"],
+  "06": ["061"],
+  "17": ["173"]
+}</code></pre>
+          <p>We show the corresponding relation names of the predicted codes here for a better review:</p>
+          <pre><code class="language-json">{
+  "Express intent to cooperate": ["Express intent to engage in material cooperation", "Express intent to meet or negotiate"],
+  "Consult": ["Consult, not specified", "Make a visit", "Host a visit", "Engage in negotiation"],
+  "Engage in material cooperation": ["Cooperate economically"],
+  "Coerce": ["Arrest or detain"]
+}</code></pre>
+          <p><strong>Ground Truth Answer:</strong></p>
+          <pre><code class="language-json">{
+  "03": ["036"],
+  "04": ["042"],
+  "17": ["173"]
+}</code></pre>
+        </ul>
       </div>
     </div>
   </div>
