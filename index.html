@@ -514,7 +514,27 @@
             <li><strong>(b) Analyze Relation Distribution:</strong> Analyze the distribution of different CAMEO codes in these events to identify the most common types of interactions.</li>
             <li><strong>(c) Examine Recent Trends:</strong> Focus on recent events to detect any emerging trends or shifts in relations.</li>
             <li><strong>(d) Contextual Analysis:</strong> Review news articles to gain insights into the context and underlying reasons for these relations.</li>
-          </ul>  
+          </ul>
+          <p>Let's start by retrieving historical events between Australia and China.</p>
+          <p><strong>Action:</strong></p>
+          <pre><code class="language-python">from datetime import datetime
+
+# Define the date range for the historical data collection
+start_date = Date("2023-01-01")
+end_date = Date("2023-11-02")
+date_range = DateRange(start_date=start_date, end_date=end_date)
+
+# Define the ISO codes for Australia and China
+aus_code = ISOCode("AUS")
+chn_code = ISOCode("CHN")
+
+# Retrieve historical events involving Australia and China
+events = get_events(date_range=date_range, head_entities=[aus_code], tail_entities=[chn_code])
+
+# Print the retrieved events
+for event in events:
+    print(event)
+</code></pre>
       </div>
     </div>
   </div>
