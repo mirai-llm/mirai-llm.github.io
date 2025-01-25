@@ -272,13 +272,12 @@ pre code {
   color: #2166ac; /* Title color */
 }
 
-/* .forecasting-example .box {
+.forecasting-example .box {
   background: white;
   padding: 2rem;
   border-radius: 8px;
-  border: 2px solid #2166ac; /* Visible border color */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-} */
+}
 
 .forecasting-example .box {
   margin-bottom: 1.5rem; 
