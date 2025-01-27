@@ -93,6 +93,29 @@
     .box {
       margin-bottom: 20px;
     }
+    /* Basic styling for the table and slider */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+    }
+    thead th {
+      border-bottom: 2px solid black;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    .checkbox-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .checkbox-container label {
+      margin-right: 15px;
+    }
   </style>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -341,6 +364,74 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- Leaderboard Section -->
+<section class="section" id="leaderboard">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Leaderboard</h2>
+
+        <!-- Slider for selecting the month -->
+        <div class="date-slider-container">
+          <input type="range" id="month-slider" min="0" max="3" step="1" value="3">
+          <span id="selected-month" style="margin-left: 20px; font-weight: bold;">2024-02</span>
+        </div>
+
+        <!-- Table for displaying the leaderboard -->
+        <div class="box m-5">
+          <!-- Checkboxes for toggling columns -->
+          <div class="checkbox-container">
+            <label>
+            <input type="checkbox" id="toggle-action-type" checked> Action Type
+          </label>
+          <label>
+            <input type="checkbox" id="toggle-binary-kl" checked> Binary KL
+          </label>
+          <label>
+            <input type="checkbox" id="toggle-quad-kl" checked> Quad KL
+          </label>
+          <label>
+            <input type="checkbox" id="toggle-first-level" checked> First-level Relation
+          </label>
+          <label>
+            <input type="checkbox" id="toggle-second-level" checked> Second-level Relation
+          </label>
+          <label>
+              <input type="checkbox" id="toggle-all" checked> Select All
+            </label>
+          </div>
+
+          <table style="width: 100%; max-width: 100%; border-collapse: collapse; font-size: 0.8rem; table-layout: auto; text-align: center; white-space: nowrap; font-family: 'Times New Roman', Times, serif; color: black">
+            <thead>
+              <tr style="background-color: #d3d3d3; border-bottom: 2px solid #000; white-space: normal;">
+                <th rowspan="2">Base LLM</th>
+                <th rowspan="2">Training Data<br>Cutoff Date</th>
+                <th class="action-type" rowspan="2">Action Type</th>
+                <th class="binary-kl" rowspan="2">Binary KL (&darr;)</th>
+                <th class="quad-kl" rowspan="2">Quad KL (&darr;)</th>
+                <th class="first-level" colspan="3">First-level Relation (%)</th>
+                <th class="second-level" colspan="3">Second-level Relation (%)</th>
+              </tr>
+              <tr style="background-color: #d3d3d3;">
+                <th class="first-level">Pre. (&uarr;)</th>
+                <th class="first-level">Rec. (&uarr;)</th>
+                <th class="first-level">F1 (&uarr;)</th>
+                <th class="second-level">Pre. (&uarr;)</th>
+                <th class="second-level">Rec. (&uarr;)</th>
+                <th class="second-level">F1 (&uarr;)</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard-body">
+              <!-- Rows will be populated dynamically -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1075,7 +1166,7 @@ for article in news_articles:
 }</code></pre>
       </div>
   </div>
-</section
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
@@ -1097,7 +1188,7 @@ for article in news_articles:
     <a href="https://www.ucla.edu/" target="_blank" rel="external">
         <img class="center-block org-banner" src="static/logos/ucla.png">
     </a>
-    <a href="https://www.berkeley.edu/" target="blank" class="ext-link">
+    <a href="https://www.caltech.edu/" target="blank" class="ext-link">
         <img class="center-block org-banner" src="static/logos/caltech.png">
     </a>
   </div>
@@ -1144,6 +1235,8 @@ for article in news_articles:
     };
   });
 </script>
+
+<script src="static/js/leaderboard.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
