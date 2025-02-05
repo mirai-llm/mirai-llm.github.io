@@ -396,3 +396,22 @@ pre code {
     justify-content: space-around;
   }
 }
+
+/* Default state: Both icons visible in light gray */
+th[data-column-index]::after {
+  content: "▲▼";
+  color: #f0f0f0; /* Default color */
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+th.asc::after {
+  content: "▲";
+  color: blue;
+}
+
+/* Descending state: Highlight the ▼ and keep ▲ light gray */
+th.desc::after {
+  content: "▼";
+  color: blue; /* Both symbols turn blue */
+}

@@ -407,21 +407,21 @@
           <table style="width: 100%; max-width: 100%; border-collapse: collapse; font-size: 0.8rem; table-layout: auto; text-align: center; white-space: nowrap; font-family: 'Times New Roman', Times, serif; color: black">
             <thead>
               <tr style="background-color: #d3d3d3; border-bottom: 2px solid #000; white-space: normal;">
-                <th rowspan="2">Base LLM</th>
-                <th rowspan="2">Training Data<br>Cutoff Date</th>
-                <th class="action-type" rowspan="2">Action Type</th>
-                <th class="binary-kl" rowspan="2">Binary KL (&darr;)</th>
-                <th class="quad-kl" rowspan="2">Quad KL (&darr;)</th>
-                <th class="first-level" colspan="3">First-level Relation (%)</th>
-                <th class="second-level" colspan="3">Second-level Relation (%)</th>
+                <th data-column-index="0" rowspan="2">Base LLM</th>
+                <th data-column-index="1" rowspan="2">Training Data<br>Cutoff Date</th>
+                <th data-column-index="2" class="action-type" rowspan="2">Action Type</th>
+                <th data-column-index="3" class="binary-kl" rowspan="2">Binary KL (&darr;)</th>
+                <th data-column-index="4" class="quad-kl" rowspan="2">Quad KL (&darr;)</th>
+                <th colspan="3" class="first-level">First-level Relation (%)</th>
+                <th colspan="3" class="second-level">Second-level Relation (%)</th>
               </tr>
               <tr style="background-color: #d3d3d3;">
-                <th class="first-level">Pre. (&uarr;)</th>
-                <th class="first-level">Rec. (&uarr;)</th>
-                <th class="first-level">F1 (&uarr;)</th>
-                <th class="second-level">Pre. (&uarr;)</th>
-                <th class="second-level">Rec. (&uarr;)</th>
-                <th class="second-level">F1 (&uarr;)</th>
+                <th data-column-index="5" class="first-level">Pre. (&uarr;)</th>
+                <th data-column-index="6" class="first-level">Rec. (&uarr;)</th>
+                <th data-column-index="7" class="first-level">F1 (&uarr;)</th>
+                <th data-column-index="8" class="second-level">Pre. (&uarr;)</th>
+                <th data-column-index="9" class="second-level">Rec. (&uarr;)</th>
+                <th data-column-index="10" class="second-level">F1 (&uarr;)</th>
               </tr>
             </thead>
             <tbody id="leaderboard-body">
@@ -446,319 +446,317 @@
             <b>Evaluate Forecasting with Different Agent Methods and Tools</b>. To investigate the effect of different tools (APIs) and agent tool-use strategies, we use 
             gpt-3.5-turbo-0125 as the base model and evaluate on the 705 queries in the test set. 
           </p>
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="box m-5">
-              <div class="content has-text-centered" style="overflow-x: auto; padding: 1rem;">
-                <table style="width: 100%; max-width: 100%; border-collapse: collapse; font-size: 0.8rem; table-layout: auto; text-align: center; white-space: nowrap; font-family: 'Times New Roman', Times, serif; color: black">
-                  <caption style="font-size: 1rem; caption-side: top; white-space: normal; color: black">Table 1: Evaluation results with different agent tools and the tool-use strategies. The best-performing score is highlighted in <strong>bold</strong> and the second-best is <u>underlined</u>.</caption>
-                  <thead>
-                    <tr style="background-color: #d3d3d3;">
-                      <th rowspan="2">Agent</th>
-                      <th colspan="2">Tool-Use</th>
-                      <th rowspan="2">Binary KL (&darr;)</th>
-                      <th rowspan="2">Quad KL (&darr;)</th>
-                      <th colspan="3">First-level Relation (%)</th>
-                      <th colspan="3">Second-level Relation (%)</th>
-                    </tr>
-                    <tr style="background-color: #d3d3d3;">
-                      <th>Action Type</th>
-                      <th>API</th>
-                      <th>Pre. (&uarr;)</th>
-                      <th>Rec. (&uarr;)</th>
-                      <th>F1 (&uarr;)</th>
-                      <th>Pre. (&uarr;)</th>
-                      <th>Rec. (&uarr;)</th>
-                      <th>F1 (&uarr;)</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Direct IO</td>
-                      <td>---</td>
-                      <td>---</td>
-                      <td>6.5&plusmn;1.7</td>
-                      <td>15.9&plusmn;1.5</td>
-                      <td>27.6&plusmn;8.1</td>
-                      <td>19.7&plusmn;5.9</td>
-                      <td>18.8&plusmn;6.9</td>
-                      <td>6.6&plusmn;1.5</td>
-                      <td>5.1&plusmn;0.4</td>
-                      <td>3.5&plusmn;0.8</td>
-                    </tr>
-                    <tr style="background-color: #f0f0f0;">
-                      <td>ZS-COT</td>
-                      <td>---</td>
-                      <td>---</td>
-                      <td>6.9&plusmn;0.8</td>
-                      <td>10.1&plusmn;0.8</td>
-                      <td>27.6&plusmn;4.0</td>
-                      <td>36.0&plusmn;4.5</td>
-                      <td>26.7&plusmn;4.1</td>
-                      <td>10.2&plusmn;1.4</td>
-                      <td>17.4&plusmn;1.1</td>
-                      <td>10.5&plusmn;0.7</td>
-                    </tr>
-                    <tr>
-                      <td rowspan="2">ReAct</td>
-                      <td><span style="background-color: #d4e3ef;">Single Function</span></td>
-                      <td><em>Event-Only</em></td>
-                      <td>33.5&plusmn;0.7</td>
-                      <td><u>6.7&plusmn;0.7</u></td>
-                      <td><u>44.3&plusmn;3.9</u></td>
-                      <td><u>54.2&plusmn;3.9</u></td>
-                      <td><u>41.4&plusmn;1.7</u></td>
-                      <td><u>25.3&plusmn;2.6</u></td>
-                      <td><u>47.4&plusmn;2.4</u></td>
-                      <td><u>26.9&plusmn;1.9</u></td>
-                    </tr>
-                    <tr>
-                      <td><span style="background-color: #d4e3ef;">Single Function</span></td>
-                      <td><em>News-Only</em></td>
-                      <td>6.1&plusmn;1.0</td>
-                      <td>12.8&plusmn;0.6</td>
-                      <td>27.8&plusmn;3.1</td>
-                      <td>25.9&plusmn;2.9</td>
-                      <td>21.8&plusmn;2.3</td>
-                      <td>6.3&plusmn;2.2</td>
-                      <td>9.0&plusmn;2.0</td>
-                      <td>5.4&plusmn;1.3</td>
-                    </tr>
-                    <tr style="background-color: #f0f0f0;">
-                      <td rowspan="2">ReAct</td>
-                      <td><span style="background-color: #d4e3ef;">Single Function</span></td>
-                      <td><em>All</em></td>
-                      <td><strong>3.1&plusmn;0.5</strong></td>
-                      <td><strong>5.9&plusmn;1.0</strong></td>
-                      <td><strong>47.6&plusmn;5.8</strong></td>
-                      <td><strong>58.3&plusmn;2.6</strong></td>
-                      <td><strong>44.2&plusmn;4.0</strong></td>
-                      <td><strong>28.7&plusmn;3.9</strong></td>
-                      <td><strong>51.0&plusmn;4.0</strong></td>
-                      <td><strong>29.6&plusmn;3.7</strong></td>
-                    </tr>
-                    <tr style="background-color: #f0f0f0;">
-                      <td><span style="background-color: #b2b2ff;">Code Block</span></td>
-                      <td><em>All</em></td>
-                      <td><u>5.1&plusmn;0.9</u></td>
-                      <td>8.9&plusmn;0.5</td>
-                      <td>27.1&plusmn;4.0</td>
-                      <td>38.6&plusmn;2.5</td>
-                      <td>25.9&plusmn;2.2</td>
-                      <td>11.6&plusmn;2.4</td>
-                      <td>26.3&plusmn;2.0</td>
-                      <td>12.6&plusmn;1.7</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p>Experimental results on the test set with different agent tools and the tool-use strategies.</p>
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered" style="overflow-x: auto; padding: 1rem;">
-                <table style="width: 100%; max-width: 100%; border-collapse: collapse; font-size: 0.8rem; table-layout: auto; text-align: center; white-space: nowrap; font-family: 'Times New Roman', Times, serif; color: black">
-                  <caption style="font-size: 1rem; caption-side: top; white-space: normal; color: black;">
-                    Table 2: Evaluation results on the 2024-02 test split using different base LLMs and action types. The best-performing score is highlighted in <strong>bold</strong> and the second-best is <u>underlined</u>. 
-                    <strong>Note that the traditional methods are task-specifically <span style="color: blue;">trained</span> on training data up to 2023-06, while all LLM-based methods are zero-shot with their general pretrained knowledge. 
-                    <span style="color: blue;">Human evaluation is conducted on a subset of 51 test events due to resource constraints and the time-intensive nature of expert evaluation.</span></strong>
-                  </caption>
-                  <thead>
-                    <tr style="background-color: #d3d3d3; border-bottom: 2px solid #000; white-space: normal;">
-                      <th rowspan="2">Base LLM</th>
-                      <th rowspan="2">Training Data<br>Cutoff Date</th>
-                      <th rowspan="2">Action Type</th>
-                      <th rowspan="2">Binary KL (&darr;)</th>
-                      <th rowspan="2">Quad KL (&darr;)</th>
-                      <th colspan="3">First-level Relation (%)</th>
-                      <th colspan="3">Second-level Relation (%)</th>
-                    </tr>
-                    <tr style="background-color: #d3d3d3;">
-                      <th>Pre. (&uarr;)</th>
-                      <th>Rec. (&uarr;)</th>
-                      <th>F1 (&uarr;)</th>
-                      <th>Pre. (&uarr;)</th>
-                      <th>Rec. (&uarr;)</th>
-                      <th>F1 (&uarr;)</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- Mistral-7B-Instruct-v0.2 -->
-                    <tr style="background-color: #f0f0f0;">
-                      <td rowspan="2">Mistral-7B-Instruct-v0.2</td>
-                      <td rowspan="2">2023-12</td>
-                      <td>Single Func</td>
-                      <td>10.3&plusmn;1.7</td>
-                      <td>14.2&plusmn;1.9</td>
-                      <td>38.1&plusmn;0.5</td>
-                      <td>19.2&plusmn;4.2</td>
-                      <td>18.9&plusmn;1.1</td>
-                      <td>21.9&plusmn;4.1</td>
-                      <td>9.8&plusmn;3.5</td>
-                      <td>9.3&plusmn;0.6</td>
-                    </tr>
-                    <tr style="background-color: #f0f0f0;">
-                      <td>Code Block</td>
-                      <td>9.1&plusmn;2.3</td>
-                      <td>14.3&plusmn;1.6</td>
-                      <td>31.3&plusmn;5.1</td>
-                      <td>12.5&plusmn;2.6</td>
-                      <td>15.1&plusmn;3.6</td>
-                      <td>13.1&plusmn;1.2</td>
-                      <td>9.4&plusmn;1.6</td>
-                      <td>8.4&plusmn;1.9</td>
-                    </tr>
-                    <!-- Llama-3-8B-Instruct -->
-                    <tr>
-                      <td rowspan="2">Llama-3-8B-Instruct</td>
-                      <td rowspan="2">2023-03</td>
-                      <td>Single Func</td>
-                      <td>9.0&plusmn;2.4</td>
-                      <td>14.1&plusmn;1.6</td>
-                      <td>39.8&plusmn;1.6</td>
-                      <td>15.6&plusmn;1.2</td>
-                      <td>18.6&plusmn;0.2</td>
-                      <td>15.8&plusmn;0.5</td>
-                      <td>11.8&plusmn;0.6</td>
-                      <td>10.3&plusmn;0.1</td>
-                    </tr>
-                    <tr>
-                      <td>Code Block</td>
-                      <td>9.4&plusmn;2.6</td>
-                      <td>14.5&plusmn;1.5</td>
-                      <td>39.5&plusmn;0.7</td>
-                      <td>12.2&plusmn;2.4</td>
-                      <td>15.9&plusmn;2.5</td>
-                      <td>18.9&plusmn;2.0</td>
-                      <td>8.9&plusmn;1.7</td>
-                      <td>9.2&plusmn;0.9</td>
-                    </tr>
-                    <!-- Llama-3.1-8B-Instruct -->
-                    <tr style="background-color: #f0f0f0;">
-                      <td rowspan="2">Llama-3.1-8B-Instruct</td>
-                      <td rowspan="2">2023-12</td>
-                      <td>Single Func</td>
-                      <td>7.8&plusmn;2.3</td>
-                      <td>12.4&plusmn;3.0</td>
-                      <td>50.1&plusmn;1.6</td>
-                      <td>21.5&plusmn;2.2</td>
-                      <td>25.2&plusmn;2.1</td>
-                      <td>22.7&plusmn;3.2</td>
-                      <td>16.8&plusmn;0.5</td>
-                      <td>14.8&plusmn;0.7</td>
-                    </tr>
-                    <tr style="background-color: #f0f0f0;">
-                      <td>Code Block</td>
-                      <td>9.1&plusmn;2.3</td>
-                      <td>14.4&plusmn;1.5</td>
-                      <td>35.7&plusmn;1.3</td>
-                      <td>15.9&plusmn;0.0</td>
-                      <td>18.3&plusmn;0.1</td>
-                      <td>14.7&plusmn;0.1</td>
-                      <td>12.8&plusmn;1.0</td>
-                      <td>10.0&plusmn;0.2</td>
-                    </tr>
-                    <!-- GPT-3.5-Turbo -->
-                    <tr>
-                      <td rowspan="2">GPT-3.5-Turbo</td>
-                      <td rowspan="2">2021-09</td>
-                      <td>Single Func</td>
-                      <td><u>3.5</u>&plusmn;1.3</td>
-                      <td><strong>7.5</strong>&plusmn;2.7</td>
-                      <td>55.7&plusmn;5.8</td>
-                      <td><strong>40.9</strong>&plusmn;2.6</td>
-                      <td>38.3&plusmn;4.2</td>
-                      <td><u>42.4</u>&plusmn;4.4</td>
-                      <td><strong>34.3</strong>&plusmn;5.0</td>
-                      <td>28.3&plusmn;3.9</td>
-                    </tr>
-                    <tr>
-                      <td>Code Block</td>
-                      <td>5.3&plusmn;1.4</td>
-                      <td>9.3&plusmn;2.3</td>
-                      <td>34.8&plusmn;11.7</td>
-                      <td>34.9&plusmn;0.9</td>
-                      <td>26.7&plusmn;3.8</td>
-                      <td>16.8&plusmn;5.9</td>
-                      <td>26.4&plusmn;0.5</td>
-                      <td>15.1&plusmn;2.6</td>
-                    </tr>
-                    <!-- GPT-4o-mini -->
-                    <tr style="background-color: #f0f0f0;">
-                      <td rowspan="2">GPT-4o-mini</td>
-                      <td rowspan="2">2023-10</td>
-                      <td>Single Func</td>
-                      <td>4.0&plusmn;0.9</td>
-                      <td>8.1&plusmn;1.3</td>
-                      <td><strong>61.3</strong>&plusmn;11.4</td>
-                      <td>34.7&plusmn;1.9</td>
-                      <td><u>39.0</u>&plusmn;6.0</td>
-                      <td>40.0&plusmn;5.5</td>
-                      <td><u>32.6</u>&plusmn;1.6</td>
-                      <td><u>29.7</u>&plusmn;3.8</td>
-                    </tr>
-                    <tr style="background-color: #f0f0f0;">
-                      <td>Code Block</td>
-                      <td><strong>3.2</strong>&plusmn;0.8</td>
-                      <td><u>7.7</u>&plusmn;1.9</td>
-                      <td><u>59.8</u>&plusmn;5.1</td>
-                      <td><u>37.1</u>&plusmn;0.4</td>
-                      <td><strong>40.0</strong>&plusmn;3.1</td>
-                      <td><strong>46.5</strong>&plusmn;2.1</td>
-                      <td>29.7&plusmn;0.6</td>
-                      <td><strong>30.3</strong>&plusmn;1.0</td>
-                    </tr>
-                    <!-- Traditional Methods -->
-                    <tr style="background-color: #d3d3d3;">
-                      <td style="font-style: italic; font-weight: bold;">Traditional Forecasting Methods</td>
-                      <td></td>
-                      <td style="color: blue; font-weight: bold;">Task-specific</td>
-                      <td colspan="8"></td>
-                    </tr>
-                    <tr style="background-color: #f0f0f0;">
-                      <td>REGCN (Li et al., 2021b)</td>
-                      <td style="color: blue;">2023-10</td>
-                      <td>&#10003;</td>
-                      <td style="color: blue;">0.3</td>
-                      <td style="color: blue;">1.0</td>
-                      <td style="color: blue;">24.8</td>
-                      <td style="color: blue;">78.2</td>
-                      <td style="color: blue;">32.4</td>
-                      <td style="color: blue;">3.9</td>
-                      <td style="color: blue;">25.7</td>
-                      <td style="color: blue;">5.6</td>
-                    </tr>
-                    <tr style="background-color: #f0f0f0;">
-                      <td>ForecastQA (Jin et al., 2021a)</td>
-                      <td style="color: blue;">2023-10</td>
-                      <td>&#10003;</td>
-                      <td style="color: blue;">9.7</td>
-                      <td style="color: blue;">13.8</td>
-                      <td style="color: blue;">55.0</td>
-                      <td style="color: blue;">16.2</td>
-                      <td style="color: blue;">22.1</td>
-                      <td style="color: blue;">40.0</td>
-                      <td style="color: blue;">8.8</td>
-                      <td style="color: blue;">12.0</td>
-                    </tr>
-                    <!-- Human Evaluators -->
-                    <tr>
-                      <td><span style="color: blue;"><strong>Human evaluators</strong></span></td>
-                      <td><span style="color: blue;">---</span></td>
-                      <td><span style="color: blue;">---</span></td>
-                      <td><span style="color: blue;">0.04</span></td>
-                      <td><span style="color: blue;">1.37</span></td>
-                      <td><span style="color: blue;">62.73</span></td>
-                      <td><span style="color: blue;">88.70</span></td>
-                      <td><span style="color: blue;">68.29</span></td>
-                      <td><span style="color: blue;">54.54</span></td>
-                      <td><span style="color: blue;">74.53</span></td>
-                      <td><span style="color: blue;">56.78</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p>Experimental results on the 2024-02 test split using different base LLMs and action types.</p>
-              </div>
+          <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+          <div class="box m-5">
+            <div class="content has-text-centered" style="overflow-x: auto; padding: 1rem;">
+              <table style="width: 100%; max-width: 100%; border-collapse: collapse; font-size: 0.8rem; table-layout: auto; text-align: center; white-space: nowrap; font-family: 'Times New Roman', Times, serif; color: black">
+                <caption style="font-size: 1rem; caption-side: top; white-space: normal; color: black">Table 1: Evaluation results with different agent tools and the tool-use strategies. The best-performing score is highlighted in <strong>bold</strong> and the second-best is <u>underlined</u>.</caption>
+                <thead>
+                  <tr style="background-color: #d3d3d3;">
+                    <th rowspan="2">Agent</th>
+                    <th colspan="2">Tool-Use</th>
+                    <th rowspan="2">Binary KL (&darr;)</th>
+                    <th rowspan="2">Quad KL (&darr;)</th>
+                    <th colspan="3">First-level Relation (%)</th>
+                    <th colspan="3">Second-level Relation (%)</th>
+                  </tr>
+                  <tr style="background-color: #d3d3d3;">
+                    <th>Action Type</th>
+                    <th>API</th>
+                    <th>Pre. (&uarr;)</th>
+                    <th>Rec. (&uarr;)</th>
+                    <th>F1 (&uarr;)</th>
+                    <th>Pre. (&uarr;)</th>
+                    <th>Rec. (&uarr;)</th>
+                    <th>F1 (&uarr;)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Direct IO</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>6.5&plusmn;1.7</td>
+                    <td>15.9&plusmn;1.5</td>
+                    <td>27.6&plusmn;8.1</td>
+                    <td>19.7&plusmn;5.9</td>
+                    <td>18.8&plusmn;6.9</td>
+                    <td>6.6&plusmn;1.5</td>
+                    <td>5.1&plusmn;0.4</td>
+                    <td>3.5&plusmn;0.8</td>
+                  </tr>
+                  <tr style="background-color: #f0f0f0;">
+                    <td>ZS-COT</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>6.9&plusmn;0.8</td>
+                    <td>10.1&plusmn;0.8</td>
+                    <td>27.6&plusmn;4.0</td>
+                    <td>36.0&plusmn;4.5</td>
+                    <td>26.7&plusmn;4.1</td>
+                    <td>10.2&plusmn;1.4</td>
+                    <td>17.4&plusmn;1.1</td>
+                    <td>10.5&plusmn;0.7</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">ReAct</td>
+                    <td><span style="background-color: #d4e3ef;">Single Function</span></td>
+                    <td><em>Event-Only</em></td>
+                    <td>33.5&plusmn;0.7</td>
+                    <td><u>6.7&plusmn;0.7</u></td>
+                    <td><u>44.3&plusmn;3.9</u></td>
+                    <td><u>54.2&plusmn;3.9</u></td>
+                    <td><u>41.4&plusmn;1.7</u></td>
+                    <td><u>25.3&plusmn;2.6</u></td>
+                    <td><u>47.4&plusmn;2.4</u></td>
+                    <td><u>26.9&plusmn;1.9</u></td>
+                  </tr>
+                  <tr>
+                    <td><span style="background-color: #d4e3ef;">Single Function</span></td>
+                    <td><em>News-Only</em></td>
+                    <td>6.1&plusmn;1.0</td>
+                    <td>12.8&plusmn;0.6</td>
+                    <td>27.8&plusmn;3.1</td>
+                    <td>25.9&plusmn;2.9</td>
+                    <td>21.8&plusmn;2.3</td>
+                    <td>6.3&plusmn;2.2</td>
+                    <td>9.0&plusmn;2.0</td>
+                    <td>5.4&plusmn;1.3</td>
+                  </tr>
+                  <tr style="background-color: #f0f0f0;">
+                    <td rowspan="2">ReAct</td>
+                    <td><span style="background-color: #d4e3ef;">Single Function</span></td>
+                    <td><em>All</em></td>
+                    <td><strong>3.1&plusmn;0.5</strong></td>
+                    <td><strong>5.9&plusmn;1.0</strong></td>
+                    <td><strong>47.6&plusmn;5.8</strong></td>
+                    <td><strong>58.3&plusmn;2.6</strong></td>
+                    <td><strong>44.2&plusmn;4.0</strong></td>
+                    <td><strong>28.7&plusmn;3.9</strong></td>
+                    <td><strong>51.0&plusmn;4.0</strong></td>
+                    <td><strong>29.6&plusmn;3.7</strong></td>
+                  </tr>
+                  <tr style="background-color: #f0f0f0;">
+                    <td><span style="background-color: #b2b2ff;">Code Block</span></td>
+                    <td><em>All</em></td>
+                    <td><u>5.1&plusmn;0.9</u></td>
+                    <td>8.9&plusmn;0.5</td>
+                    <td>27.1&plusmn;4.0</td>
+                    <td>38.6&plusmn;2.5</td>
+                    <td>25.9&plusmn;2.2</td>
+                    <td>11.6&plusmn;2.4</td>
+                    <td>26.3&plusmn;2.0</td>
+                    <td>12.6&plusmn;1.7</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>Experimental results on the test set with different agent tools and the tool-use strategies.</p>
             </div>
           </div>
+          <div class="box m-5">
+            <div class="content has-text-centered" style="overflow-x: auto; padding: 1rem;">
+              <table style="width: 100%; max-width: 100%; border-collapse: collapse; font-size: 0.8rem; table-layout: auto; text-align: center; white-space: nowrap; font-family: 'Times New Roman', Times, serif; color: black">
+                <caption style="font-size: 1rem; caption-side: top; white-space: normal; color: black;">
+                  Table 2: Evaluation results on the 2024-02 test split using different base LLMs and action types. The best-performing score is highlighted in <strong>bold</strong> and the second-best is <u>underlined</u>.
+                </caption>
+                <thead>
+                  <tr style="background-color: #d3d3d3; border-bottom: 2px solid #000; white-space: normal;">
+                    <th rowspan="2">Base LLM</th>
+                    <th rowspan="2">Training Data<br>Cutoff Date</th>
+                    <th rowspan="2">Action Type</th>
+                    <th rowspan="2">Binary KL (&darr;)</th>
+                    <th rowspan="2">Quad KL (&darr;)</th>
+                    <th colspan="3">First-level Relation (%)</th>
+                    <th colspan="3">Second-level Relation (%)</th>
+                  </tr>
+                  <tr style="background-color: #d3d3d3;">
+                    <th>Pre. (&uarr;)</th>
+                    <th>Rec. (&uarr;)</th>
+                    <th>F1 (&uarr;)</th>
+                    <th>Pre. (&uarr;)</th>
+                    <th>Rec. (&uarr;)</th>
+                    <th>F1 (&uarr;)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Mistral-7B-Instruct-v0.2 -->
+                  <tr style="background-color: #f0f0f0;">
+                    <td rowspan="2">Mistral-7B-Instruct-v0.2</td>
+                    <td rowspan="2">2023-12</td>
+                    <td>Single Func</td>
+                    <td>10.3&plusmn;1.7</td>
+                    <td>14.2&plusmn;1.9</td>
+                    <td>38.1&plusmn;0.5</td>
+                    <td>19.2&plusmn;4.2</td>
+                    <td>18.9&plusmn;1.1</td>
+                    <td>21.9&plusmn;4.1</td>
+                    <td>9.8&plusmn;3.5</td>
+                    <td>9.3&plusmn;0.6</td>
+                  </tr>
+                  <tr style="background-color: #f0f0f0;">
+                    <td>Code Block</td>
+                    <td>9.1&plusmn;2.3</td>
+                    <td>14.3&plusmn;1.6</td>
+                    <td>31.3&plusmn;5.1</td>
+                    <td>12.5&plusmn;2.6</td>
+                    <td>15.1&plusmn;3.6</td>
+                    <td>13.1&plusmn;1.2</td>
+                    <td>9.4&plusmn;1.6</td>
+                    <td>8.4&plusmn;1.9</td>
+                  </tr>
+                  <!-- Llama-3-8B-Instruct -->
+                  <tr>
+                    <td rowspan="2">Llama-3-8B-Instruct</td>
+                    <td rowspan="2">2023-03</td>
+                    <td>Single Func</td>
+                    <td>9.0&plusmn;2.4</td>
+                    <td>14.1&plusmn;1.6</td>
+                    <td>39.8&plusmn;1.6</td>
+                    <td>15.6&plusmn;1.2</td>
+                    <td>18.6&plusmn;0.2</td>
+                    <td>15.8&plusmn;0.5</td>
+                    <td>11.8&plusmn;0.6</td>
+                    <td>10.3&plusmn;0.1</td>
+                  </tr>
+                  <tr>
+                    <td>Code Block</td>
+                    <td>9.4&plusmn;2.6</td>
+                    <td>14.5&plusmn;1.5</td>
+                    <td>39.5&plusmn;0.7</td>
+                    <td>12.2&plusmn;2.4</td>
+                    <td>15.9&plusmn;2.5</td>
+                    <td>18.9&plusmn;2.0</td>
+                    <td>8.9&plusmn;1.7</td>
+                    <td>9.2&plusmn;0.9</td>
+                  </tr>
+                  <!-- Llama-3.1-8B-Instruct -->
+                  <tr style="background-color: #f0f0f0;">
+                    <td rowspan="2">Llama-3.1-8B-Instruct</td>
+                    <td rowspan="2">2023-12</td>
+                    <td>Single Func</td>
+                    <td>7.8&plusmn;2.3</td>
+                    <td>12.4&plusmn;3.0</td>
+                    <td>50.1&plusmn;1.6</td>
+                    <td>21.5&plusmn;2.2</td>
+                    <td>25.2&plusmn;2.1</td>
+                    <td>22.7&plusmn;3.2</td>
+                    <td>16.8&plusmn;0.5</td>
+                    <td>14.8&plusmn;0.7</td>
+                  </tr>
+                  <tr style="background-color: #f0f0f0;">
+                    <td>Code Block</td>
+                    <td>9.1&plusmn;2.3</td>
+                    <td>14.4&plusmn;1.5</td>
+                    <td>35.7&plusmn;1.3</td>
+                    <td>15.9&plusmn;0.0</td>
+                    <td>18.3&plusmn;0.1</td>
+                    <td>14.7&plusmn;0.1</td>
+                    <td>12.8&plusmn;1.0</td>
+                    <td>10.0&plusmn;0.2</td>
+                  </tr>
+                  <!-- GPT-3.5-Turbo -->
+                  <tr>
+                    <td rowspan="2">GPT-3.5-Turbo</td>
+                    <td rowspan="2">2021-09</td>
+                    <td>Single Func</td>
+                    <td><u>3.5</u>&plusmn;1.3</td>
+                    <td><strong>7.5</strong>&plusmn;2.7</td>
+                    <td>55.7&plusmn;5.8</td>
+                    <td><strong>40.9</strong>&plusmn;2.6</td>
+                    <td>38.3&plusmn;4.2</td>
+                    <td><u>42.4</u>&plusmn;4.4</td>
+                    <td><strong>34.3</strong>&plusmn;5.0</td>
+                    <td>28.3&plusmn;3.9</td>
+                  </tr>
+                  <tr>
+                    <td>Code Block</td>
+                    <td>5.3&plusmn;1.4</td>
+                    <td>9.3&plusmn;2.3</td>
+                    <td>34.8&plusmn;11.7</td>
+                    <td>34.9&plusmn;0.9</td>
+                    <td>26.7&plusmn;3.8</td>
+                    <td>16.8&plusmn;5.9</td>
+                    <td>26.4&plusmn;0.5</td>
+                    <td>15.1&plusmn;2.6</td>
+                  </tr>
+                  <!-- GPT-4o-mini -->
+                  <tr style="background-color: #f0f0f0;">
+                    <td rowspan="2">GPT-4o-mini</td>
+                    <td rowspan="2">2023-10</td>
+                    <td>Single Func</td>
+                    <td>4.0&plusmn;0.9</td>
+                    <td>8.1&plusmn;1.3</td>
+                    <td><strong>61.3</strong>&plusmn;11.4</td>
+                    <td>34.7&plusmn;1.9</td>
+                    <td><u>39.0</u>&plusmn;6.0</td>
+                    <td>40.0&plusmn;5.5</td>
+                    <td><u>32.6</u>&plusmn;1.6</td>
+                    <td><u>29.7</u>&plusmn;3.8</td>
+                  </tr>
+                  <tr style="background-color: #f0f0f0;">
+                    <td>Code Block</td>
+                    <td><strong>3.2</strong>&plusmn;0.8</td>
+                    <td><u>7.7</u>&plusmn;1.9</td>
+                    <td><u>59.8</u>&plusmn;5.1</td>
+                    <td><u>37.1</u>&plusmn;0.4</td>
+                    <td><strong>40.0</strong>&plusmn;3.1</td>
+                    <td><strong>46.5</strong>&plusmn;2.1</td>
+                    <td>29.7&plusmn;0.6</td>
+                    <td><strong>30.3</strong>&plusmn;1.0</td>
+                  </tr>
+                  <!-- Traditional Methods -->
+                  <tr style="background-color: #d3d3d3;">
+                    <td style="font-style: italic; font-weight: bold;">Traditional Forecasting Methods</td>
+                    <td></td>
+                    <td style="font-weight: bold;">Task-specific</td>
+                    <td colspan="8"></td>
+                  </tr>
+                  <tr style="background-color: #f0f0f0;">
+                    <td>REGCN (Li et al., 2021b)</td>
+                    <td>2023-10</td>
+                    <td>&#10003;</td>
+                    <td>0.3</td>
+                    <td>1.0</td>
+                    <td>24.8</td>
+                    <td>78.2</td>
+                    <td>32.4</td>
+                    <td>3.9</td>
+                    <td>25.7</td>
+                    <td>5.6</td>
+                  </tr>
+                  <tr style="background-color: #f0f0f0;">
+                    <td>ForecastQA (Jin et al., 2021a)</td>
+                    <td>2023-10</td>
+                    <td>&#10003;</td>
+                    <td>9.7</td>
+                    <td>13.8</td>
+                    <td>55.0</td>
+                    <td>16.2</td>
+                    <td>22.1</td>
+                    <td>40.0</td>
+                    <td>8.8</td>
+                    <td>12.0</td>
+                  </tr>
+                  <!-- Human Evaluators -->
+                  <tr>
+                    <td><span><strong>Human evaluators</strong></span></td>
+                    <td><span>---</span></td>
+                    <td><span>---</span></td>
+                    <td><span>0.04</span></td>
+                    <td><span>1.37</span></td>
+                    <td><span>62.73</span></td>
+                    <td><span>88.70</span></td>
+                    <td><span>68.29</span></td>
+                    <td><span>54.54</span></td>
+                    <td><span>74.53</span></td>
+                    <td><span>56.78</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>Experimental results on the 2024-02 test split using different base LLMs and action types.</p>
+            </div>
+          </div>
+          <!-- </div> -->
           <p>
             <b>Evaluate Forecasting with Different Base LLMs</b>. We further investigate the role of the 
             underlying LLMs in the agent's performance. 
@@ -1235,6 +1233,94 @@ for article in news_articles:
     };
   });
 </script>
+
+<script>
+  // 1. Attach click listeners to each TH that has data-column-index.
+  document.addEventListener("DOMContentLoaded", () => {
+    const tableBody = document.querySelector("#leaderboard-body");
+    const headers = document.querySelectorAll("thead th[data-column-index]");
+  
+    headers.forEach((th) => {
+      th.addEventListener("click", () => {
+        const columnIndex = parseInt(th.getAttribute("data-column-index"));
+        // Toggle the sort order
+        const currentOrder = th.dataset.sortOrder || "none"; 
+        const newOrder = currentOrder === "asc" ? "desc" : "asc"; 
+  
+        // Clear sortOrder on all other headers
+        headers.forEach(h => {
+          h.dataset.sortOrder = "none";
+          h.classList.remove("asc", "desc");
+        });
+  
+        // Set the clicked header's new order
+        th.dataset.sortOrder = newOrder;
+        th.classList.add(newOrder);
+  
+        // 2. Grab all table rows in the <tbody>
+        const rowsArray = Array.from(tableBody.querySelectorAll("tr"));
+  
+        // 3. Sort them
+        rowsArray.sort((a, b) => {
+          // Get text from the relevant column cell
+          const aText = a.cells[columnIndex].innerText.trim();
+          const bText = b.cells[columnIndex].innerText.trim();
+  
+          // Convert them to comparable values (numeric or string)
+          const aValue = parseCellValue(aText);
+          const bValue = parseCellValue(bText);
+  
+          return compareValues(aValue, bValue, newOrder === "asc");
+        });
+  
+        // 4. Re-append rows in sorted order
+        rowsArray.forEach((row, idx) => {
+          // Alternate background color or keep your existing styling
+          row.style.backgroundColor = idx % 2 === 0 ? "#ffffff" : "#f0f0f0";
+          tableBody.appendChild(row);
+        });
+      });
+    });
+  });
+  
+  /**
+   * parseCellValue: tries to parse a cell value as a float (especially if containing “±” or “%”).
+   * If parsing fails, return lowercase string for simple A-Z sorting.
+   */
+  function parseCellValue(text) {
+    // Remove trailing '%' if present
+    text = text.replace("%", "");
+  
+    // If there's a '±', take the left side as the main numeric part
+    if (text.includes("±")) {
+      text = text.split("±")[0];
+    }
+  
+    const numericVal = parseFloat(text);
+    if (!isNaN(numericVal)) {
+      return numericVal; // for numeric sort
+    } else {
+      return text.toLowerCase(); // for string sort
+    }
+  }
+  
+  /**
+   * compareValues: compares either as numbers or as strings,
+   * depending on the types we get from parseCellValue.
+   */
+  function compareValues(a, b, isAscending) {
+    if (typeof a === "number" && typeof b === "number") {
+      return isAscending ? a - b : b - a;
+    }
+    // Otherwise, do a string locale compare
+    if (isAscending) {
+      return a.localeCompare(b);
+    } else {
+      return b.localeCompare(a);
+    }
+  }
+</script>
+  
 
 <script src="static/js/leaderboard.js"></script>
 
