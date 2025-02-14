@@ -276,8 +276,8 @@
           <p>
             <b>MIRAI</b> is a benchmark crafted for evaluating LLM agents for temporal forecasting of 
             international events, with tool-use and complex reasoning. We finalized a collection of 
-            <b>991,759</b> GDELT event records, corresponding to <b>59,161</b> unique events and 
-            <b>296,630</b> unique news articles. Our test set contains <b>705</b> query and answer pairs on forecasting
+            <b>1,296,991</b> GDELT event records, corresponding to <b>75,341</b> unique events and 
+            <b>401,013</b> unique news articles. Our test set contains <b>705</b> query and answer pairs on forecasting
             an event of given timestamp between two countries, with a <b>100</b> balanced test subset. 
           </p>
         </div>
@@ -765,7 +765,7 @@
             <div class="box m-5">
               <div class="content has-text-centered">
                 <img src="figures/multi_rounds.png" alt="image name" width="70%"/>
-                <p> Self-consistency of Mistral-7B model increases with more samples. </p>
+                <p> Self-consistency of Mistral-7B-Instruct-v0.2 model increases with more samples. </p>
               </div>
             </div>
             <div class="box m-5">
@@ -821,7 +821,7 @@
             <div class="content has-text-centered">
               <img src="figures/first_by_quad.png" alt="image name" width="90%"/>
               <p> F1 scores of
-                different base LLM agents on relation prediction, 
+                different different LLMs on relation prediction, 
                 categorized based on the quadratic classes. </p>
             </div>
           </div>
@@ -858,7 +858,8 @@
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="figures/weight.png" alt="image name" width="65%"/>
-              <p> Freq.(correct) - Freq.(incorrect), in which red (blue) edges indicate positive (negative) contributions.</p>
+              <p> Freq.(correct) - Freq.(incorrect), in which
+                blue (red) edges indicate positive (negative) contributions.</p>
             </div>
           </div>
         </div>
